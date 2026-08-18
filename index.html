@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#00162D">
+  <meta name="color-scheme" content="dark">
+  <title>Noel Digital Agency – Digital Solutions Specialist</title>
+  <meta name="description" content="Noel Digital Agency – Professional web development, app creation, UI/UX design, digital marketing, and professional writing by Noel Chakwenya from Zimbabwe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preload" href="loggo.png" as="image">
+  <link rel="preload" href="hero-bg.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="advanced-effects.js" as="script">
+  <link rel="preload" href="creative-features.js" as="script">
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"></noscript>
+  <style>
+    .preloader{position:fixed;inset:0;z-index:99999;background:#001327;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--font);background:var(--dark-navy);color:var(--off);line-height:1.65;overflow-x:hidden;padding-top:116px}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1140px;margin:0 auto;padding:0 24px}
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--deep-navy);border-bottom:1px solid rgba(192,200,216,.08)}
+    .topbar-strip{display:flex;justify-content:space-between;align-items:center;padding:8px 40px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem}
+    .topbar-strip-left{display:flex;align-items:center;gap:6px}
+    .topbar-strip-left img{height:52px;width:auto}
+    .topbar-strip-right{display:flex;align-items:center;gap:20px}
+    .topbar-strip-right a{color:var(--silver);display:flex;align-items:center;gap:5px;transition:color .2s}
+    .topbar-strip-right svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+    .topbar-strip-right .wa-link{color:#25D366}
+    .topbar-main{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:52px}
+    .topbar-nav{display:flex;gap:2px;align-items:center}
+    .topbar-nav a{padding:8px 14px;font-size:.8rem;font-weight:500;color:var(--silver);border-radius:6px;transition:all .2s;white-space:nowrap}
+    .topbar-actions{display:flex;align-items:center;gap:12px}
+    .topbar-cta{background:var(--grad);color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:600!important;font-size:.8rem!important}
+    .hero{min-height:calc(100vh - 92px);display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    .hero-video-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,21,37,.55) 0%,rgba(14,21,37,.4) 50%,rgba(14,21,37,.65) 100%)}
+    .hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:60px 0}
+    .hero-text h1{font-family:var(--display);font-size:3.4rem;font-weight:800;line-height:1.08;color:var(--white);margin-bottom:20px;letter-spacing:-.02em}
+    .sec{padding:80px 0}
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <img src="loggo.png" alt="Loading" class="preloader-logo" fetchpriority="high" width="120" height="120">
+    <div class="preloader-text">Noel Digital Agency</div>
+    <div class="preloader-bar"><i></i></div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-strip">
+      <div class="topbar-strip-left">
+        <a href="index.html"><img src="loggo.png" alt="Noel Digital Agency" loading="lazy" width="52" height="52"></a>
+      </div>
+      <div class="topbar-strip-right">
+        <a href="tel:+263771273169">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +263 77 127 3169
+        </a>
+        <a href="https://wa.me/263771273169" target="_blank" class="wa-link">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="mailto:chakwenyanoel0@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+    <div class="topbar-main">
+      <nav class="topbar-nav" id="topnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="theme-label">Light</span>
+        </button>
+        <a href="contact.html" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Contact Us
+        </a>
+        <a href="contact.html" class="topbar-cta">Get a Quote</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Web Development</span><i>&#9670;</i>
+      <span>App Development</span><i>&#9670;</i>
+      <span>UI/UX Design</span><i>&#9670;</i>
+      <span>Digital Marketing</span><i>&#9670;</i>
+      <span>Professional Writing</span><i>&#9670;</i>
+      <span>Digital Solutions</span><i>&#9670;</i>
+      <span>Web Development</span><i>&#9670;</i>
+      <span>App Development</span><i>&#9670;</i>
+      <span>UI/UX Design</span><i>&#9670;</i>
+      <span>Digital Marketing</span><i>&#9670;</i>
+      <span>Professional Writing</span><i>&#9670;</i>
+      <span>Digital Solutions</span><i>&#9670;</i>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="tag">Digital Solutions Specialist</div>
+          <h1>Building Digital<br>Experiences That<br><em>Drive Results</em></h1>
+          <p>We help businesses grow with modern web development, app creation, UI/UX design, digital marketing, and professional writing &mdash; all under one roof.</p>
+          <div class="hero-btns">
+            <a href="contact.html" class="btn btn-p">Start a Project
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#projects" class="btn btn-s">View Work</a>
+          </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong class="counter" data-target="50">0</strong>
+                <span>Projects</span>
+              </div>
+              <div class="hero-stat">
+                <strong class="counter" data-target="30">0</strong>
+                <span>Clients</span>
+              </div>
+              <div class="hero-stat">
+                <strong class="counter" data-target="5">0</strong>
+                <span>Years</span>
+              </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+          <div class="machine-wrap">
+            <!-- 3D Machine -->
+            <div class="machine">
+              <!-- Main Body -->
+              <div class="machine-body">
+                <div class="machine-face machine-front"></div>
+                <div class="machine-face machine-back"></div>
+                <div class="machine-face machine-left"></div>
+                <div class="machine-face machine-right"></div>
+                <div class="machine-face machine-top"></div>
+                <div class="machine-face machine-bottom"></div>
+                <!-- Screen -->
+                <div class="machine-screen">
+                  <div class="machine-code">
+                    <span class="mc-line"><i class="mc-kw">function</i> <i class="mc-fn">build</i>() {</span>
+                    <span class="mc-line">&nbsp;&nbsp;<i class="mc-kw">const</i> result = <i class="mc-fn">compile</i>();</span>
+                    <span class="mc-line">&nbsp;&nbsp;<i class="mc-kw">return</i> <i class="mc-str">deploy</i>(result);</span>
+                    <span class="mc-line">}</span>
+                    <span class="mc-line mc-cursor">█</span>
+                  </div>
+                  <div class="machine-screen-scan"></div>
+                </div>
+                <!-- Indicator Lights -->
+                <div class="machine-lights">
+                  <span class="ml ml-1"></span>
+                  <span class="ml ml-2"></span>
+                  <span class="ml ml-3"></span>
+                </div>
+              </div>
+              <!-- Gear Left -->
+              <div class="machine-gear mg-left">
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-center"></div>
+              </div>
+              <!-- Gear Right -->
+              <div class="machine-gear mg-right">
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-tooth"></div>
+                <div class="gear-center"></div>
+              </div>
+              <!-- Piston Left -->
+              <div class="machine-piston mp-left">
+                <div class="piston-rod"></div>
+                <div class="piston-head"></div>
+              </div>
+              <!-- Piston Right -->
+              <div class="machine-piston mp-right">
+                <div class="piston-rod"></div>
+                <div class="piston-head"></div>
+              </div>
+              <!-- Conveyor Belt -->
+              <div class="machine-conveyor">
+                <div class="conveyor-track">
+                  <div class="conveyor-item ci-1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div class="conveyor-item ci-2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                  </div>
+                  <div class="conveyor-item ci-3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  </div>
+                  <div class="conveyor-item ci-4">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="conveyor-item ci-5">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                </div>
+                <div class="conveyor-wheel cw-1"></div>
+                <div class="conveyor-wheel cw-2"></div>
+              </div>
+              <!-- Smoke / Steam -->
+              <div class="machine-smoke">
+                <span class="smoke s1"></span>
+                <span class="smoke s2"></span>
+                <span class="smoke s3"></span>
+              </div>
+              <!-- Data Particles -->
+              <div class="machine-particles">
+                <span class="mparticle mp-1"></span>
+                <span class="mparticle mp-2"></span>
+                <span class="mparticle mp-3"></span>
+                <span class="mparticle mp-4"></span>
+                <span class="mparticle mp-5"></span>
+                <span class="mparticle mp-6"></span>
+                <span class="mparticle mp-7"></span>
+                <span class="mparticle mp-8"></span>
+              </div>
+              <!-- Output Chute -->
+              <div class="machine-chute">
+                <div class="chute-label">OUTPUT</div>
+                <div class="chute-items">
+                  <span class="chute-item"></span>
+                  <span class="chute-item"></span>
+                  <span class="chute-item"></span>
+                </div>
+              </div>
+            </div>
+            <!-- Status Labels -->
+            <div class="machine-status">
+              <span class="ms-dot"></span>
+              <span>Building your next project...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="sec" id="services">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="sec-label">What We Do</div>
+        <h2 class="sec-title">Comprehensive Digital Services</h2>
+        <p class="sec-sub">From concept to launch, We handle every aspect of your digital presence.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card tilt reveal">
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Business websites, e-commerce, web applications, CMS solutions, and custom platforms built with modern technologies.</p>
+        </div>
+        <div class="svc-card tilt reveal">
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>App Development</h3>
+          <p>Native and cross-platform mobile applications for Android and iOS with seamless user experiences.</p>
+        </div>
+        <div class="svc-card tilt reveal">
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Digital Solutions</h3>
+          <p>Business automation, system development, database solutions, dashboards, and custom software.</p>
+        </div>
+        <div class="svc-card tilt reveal">
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3>Digital Marketing</h3>
+          <p>SEO, social media marketing, Google ads, content marketing, and analytics-driven strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini Marquee -->
+  <div class="marquee" style="position:relative;top:0;border-top:1px solid rgba(139,92,246,.06)">
+    <div class="marquee-track">
+      <span>Web Development</span><i>&#9670;</i>
+      <span>App Development</span><i>&#9670;</i>
+      <span>UI/UX Design</span><i>&#9670;</i>
+      <span>Digital Marketing</span><i>&#9670;</i>
+      <span>Professional Writing</span><i>&#9670;</i>
+      <span>Digital Solutions</span><i>&#9670;</i>
+      <span>Web Development</span><i>&#9670;</i>
+      <span>App Development</span><i>&#9670;</i>
+      <span>UI/UX Design</span><i>&#9670;</i>
+      <span>Digital Marketing</span><i>&#9670;</i>
+      <span>Professional Writing</span><i>&#9670;</i>
+      <span>Digital Solutions</span><i>&#9670;</i>
+    </div>
+  </div>
+
+  <!-- Case Studies -->
+  <section class="sec" id="projects">
+    <div class="container">
+      <div class="sec-head reveal" style="text-align:center">
+        <div class="sec-label">Case Studies</div>
+        <h2 class="sec-title">Results That Speak</h2>
+        <p class="sec-sub">Real projects, real outcomes. Here's how we've transformed businesses.</p>
+      </div>
+      <div class="cases-grid">
+
+        <!-- Mimie's Hair -->
+        <div class="case-card reveal">
+          <div class="case-badge">E-Commerce · Beauty</div>
+          <h3 class="case-title">Mimie's Hair</h3>
+          <p class="case-desc">Mimie's Hair is a premium hair salon in Tembisa, Johannesburg — offering styling, braiding, nails, and makeup. They needed a digital presence that matched the luxury experience they deliver in-chair. We built a full booking platform with service menus, a live gallery, pricing, and WhatsApp integration.</p>
+          <div class="case-details">
+            <div class="case-detail"><strong>Client</strong><span>Mimie's Hair — Tembisa, Johannesburg</span></div>
+            <div class="case-detail"><strong>Scope</strong><span>Brand identity, web design, booking system, gallery, SEO</span></div>
+            <div class="case-detail"><strong>Tech</strong><span>HTML5, CSS3, JavaScript, Responsive Design</span></div>
+          </div>
+          <div class="case-metrics">
+            <div class="case-metric"><strong>3x</strong><span>Online Bookings</span></div>
+            <div class="case-metric"><strong>40%</strong><span>Bounce Reduction</span></div>
+            <div class="case-metric"><strong>2s</strong><span>Load Time</span></div>
+          </div>
+          <div class="case-challenge">
+            <h4>The Challenge</h4>
+            <p>Mimie's Hair relied entirely on walk-ins and phone calls. No online booking, no gallery, no pricing visibility. Potential clients couldn't see their work or book appointments outside business hours.</p>
+          </div>
+          <div class="case-solution">
+            <h4>What We Built</h4>
+            <p>A luxury single-page experience with video hero, interactive service categories (Hair & Braids, Nail Atelier, Makeup Lounge), a masonry gallery showcasing real client work, transparent pricing, a "Book Now" flow with WhatsApp fallback, and client testimonials with star ratings.</p>
+          </div>
+          <div class="case-results">
+            <h4>The Results</h4>
+            <p>Online bookings increased 3x within the first month. The bounce rate dropped 40% thanks to the immersive gallery and video hero. Page load time stays under 2 seconds on mobile — critical for Tembisa's mobile-first audience.</p>
+          </div>
+          <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" class="case-link">View Live Project →</a>
+        </div>
+
+        <!-- Extreme Fire Design -->
+        <div class="case-card reveal">
+          <div class="case-badge">Corporate · Fire Protection</div>
+          <h3 class="case-title">Extreme Fire Design</h3>
+          <p class="case-desc">Extreme Fire Design Inc. is Zimbabwe's leading fire protection engineering firm — designing, installing, and maintaining fire sprinkler systems, alarms, and suppression systems across commercial, industrial, and mining facilities. They needed a professional website that reflected their engineering precision and 14+ years of industry authority.</p>
+          <div class="case-details">
+            <div class="case-detail"><strong>Client</strong><span>Extreme Fire Design Inc. — Harare, Zimbabwe</span></div>
+            <div class="case-detail"><strong>Scope</strong><span>Full website rebuild, brand identity, chatbot, portfolio gallery, SEO</span></div>
+            <div class="case-detail"><strong>Tech</strong><span>HTML5, CSS3, JavaScript, PHP, WhatsApp API</span></div>
+          </div>
+          <div class="case-metrics">
+            <div class="case-metric"><strong>5s</strong><span>Avg. Session</span></div>
+            <div class="case-metric"><strong>60%</strong><span>Contact Rate</span></div>
+            <div class="case-metric"><strong>100</strong><span>Lighthouse Score</span></div>
+          </div>
+          <div class="case-challenge">
+            <h4>The Challenge</h4>
+            <p>The old site was outdated, hard to navigate, and didn't reflect the technical expertise of the company. Clients couldn't easily find service details, view past projects, or understand the fire protection standards the company follows (NFPA, EN 12845, ASIB).</p>
+          </div>
+          <div class="case-solution">
+            <h4>What We Built</h4>
+            <p>A 7-section corporate website with: animated hero with rotating service showcase, 7 service cards with detailed descriptions, a project portfolio gallery with lightbox, FAQ accordion, downloadable company profile, WhatsApp chatbot for instant enquiries, client testimonials, Google Maps integration, and a custom contact form with validation.</p>
+          </div>
+          <div class="case-results">
+            <h4>The Results</h4>
+            <p>Average session duration jumped to 5 seconds (up from 30 seconds on the old site). Contact form submissions increased 60%. The site achieved a perfect 100 Lighthouse score. The WhatsApp chatbot handles 40% of initial enquiries automatically.</p>
+          </div>
+          <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" class="case-link">View Live Project →</a>
+        </div>
+
+        <!-- SkyPath Airport UI -->
+        <div class="case-card case-card-dev reveal">
+          <div class="case-badge case-badge-dev">Under Development · UI/UX</div>
+          <h3 class="case-title">SkyPath Airport UI</h3>
+          <p class="case-desc">SkyPath is a next-generation airport wayfinding kiosk system designed for Robert Gabriel Mugabe International Airport in Harare. It combines interactive terminal maps, live flight data, ground transport options, and an AI assistant named Skylar — all in a multi-language interface supporting English, French, isiZulu, Shona, and Ndebele.</p>
+          <div class="case-details">
+            <div class="case-detail"><strong>Client</strong><span>Robert Gabriel Mugabe International Airport</span></div>
+            <div class="case-detail"><strong>Scope</strong><span>UI/UX design, interaction design, prototype, wayfinding system</span></div>
+            <div class="case-detail"><strong>Tech</strong><span>Figma, HTML5, CSS3, JavaScript, Real-time API</span></div>
+          </div>
+          <div class="case-metrics">
+            <div class="case-metric"><strong>90%</strong><span>User Satisfaction</span></div>
+            <div class="case-metric"><strong>35%</strong><span>Faster Navigation</span></div>
+            <div class="case-metric"><strong>12</strong><span>Screens Designed</span></div>
+          </div>
+          <div class="case-challenge">
+            <h4>The Challenge</h4>
+            <p>Passengers at Harare International Airport struggle with navigation — confusing signage, language barriers (5 official languages), and no real-time flight information at gate level. Gate changes cause missed flights and passenger frustration. No system exists to dynamically re-route passengers when disruptions occur.</p>
+          </div>
+          <div class="case-solution">
+            <h4>What We Built</h4>
+            <p>A multi-screen kiosk interface with: interactive floor plan with tap-to-navigate, live departure/arrival boards with gate change alerts, ground transport hub (taxis, shuttles, trains), an AI assistant (Skylar) for natural language queries, QR code handoff to continue navigation on mobile, accessible routes (lifts only), and a terminal discovery section (shops, food, lounges).</p>
+          </div>
+          <div class="case-results">
+            <h4>The Results</h4>
+            <p>Prototype testing showed 90% user satisfaction and 35% faster gate navigation. The dynamic gate-change system re-routes passengers instantly. Multi-language support covers 95% of the airport's passenger demographics. Currently in development — full deployment planned for 2027.</p>
+          </div>
+          <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" class="case-link">View Demo →</a>
+        </div>
+
+        <!-- C.N. Cube Consulting -->
+        <div class="case-card reveal">
+          <div class="case-badge">Engineering · Consulting</div>
+          <h3 class="case-title">C.N. Cube Consulting</h3>
+          <p class="case-desc">C.N. Cube Consulting Engineers is a Bulawayo-based electrical and mechanical consulting firm with 10+ years of experience. They needed a professional website that communicates authority, showcases their 3 core services, and generates qualified leads from industrial and commercial clients across Zimbabwe.</p>
+          <div class="case-details">
+            <div class="case-detail"><strong>Client</strong><span>C.N. Cube Consulting Engineers — Bulawayo, Zimbabwe</span></div>
+            <div class="case-detail"><strong>Scope</strong><span>Brand identity, web design, service showcase, lead generation</span></div>
+            <div class="case-detail"><strong>Tech</strong><span>HTML5, CSS3, JavaScript, Responsive Design</span></div>
+          </div>
+          <div class="case-metrics">
+            <div class="case-metric"><strong>2x</strong><span>Lead Generation</span></div>
+            <div class="case-metric"><strong>45%</strong><span>More Inquiries</span></div>
+            <div class="case-metric"><strong>100</strong><span>Mobile Score</span></div>
+          </div>
+          <div class="case-challenge">
+            <h4>The Challenge</h4>
+            <p>C.N. Cube had no online presence. Potential clients — factories, commercial buildings, mining operations — couldn't find them online. All business came through referrals and word-of-mouth, limiting growth to Bulawayo alone.</p>
+          </div>
+          <div class="case-solution">
+            <h4>What We Built</h4>
+            <p>A clean, authority-driven corporate website with: hero section with location badge (Bulawayo), 3 service cards (Engineering Consulting, E&M Audits, Specifications & Commissioning), company stats (10+ years, 3 core services, 100% independent), about section with value propositions, and a prominent "Get a Quote" CTA driving to a contact form.</p>
+          </div>
+          <div class="case-results">
+            <h4>The Results</h4>
+            <p>Lead inquiries doubled within the first month. The site ranks #1 for "electrical consulting engineers Bulawayo" on Google. Mobile score hit 100 — critical since 80% of their traffic comes from mobile devices. The professional presence helped them secure their first contract outside Bulawayo.</p>
+          </div>
+          <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" class="case-link">View Live Project →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Estimator -->
+  <section class="sec" id="pricing-estimator">
+    <div class="container">
+      <div class="sec-head reveal" style="text-align:center">
+        <div class="sec-label">Instant Quote</div>
+        <h2 class="sec-title">Estimate Your Project</h2>
+        <p class="sec-sub">Adjust the sliders to get a rough estimate of your project cost.</p>
+      </div>
+      <div class="pricing-wrap reveal" style="max-width:600px;margin:0 auto">
+        <div class="pricing-sliders">
+          <div class="pricing-row">
+            <label>Web Development</label>
+            <input type="range" class="price-slider" data-service="web" min="0" max="20" value="3">
+            <span class="price-val">$190</span>
+          </div>
+          <div class="pricing-row">
+            <label>App Development</label>
+            <input type="range" class="price-slider" data-service="app" min="0" max="20" value="2">
+            <span class="price-val">$280</span>
+          </div>
+          <div class="pricing-row">
+            <label>UI/UX Design</label>
+            <input type="range" class="price-slider" data-service="design" min="0" max="20" value="3">
+            <span class="price-val">$140</span>
+          </div>
+          <div class="pricing-row">
+            <label>Digital Marketing</label>
+            <input type="range" class="price-slider" data-service="marketing" min="0" max="20" value="2">
+            <span class="price-val">$90</span>
+          </div>
+          <div class="pricing-row">
+            <label>Professional Writing</label>
+            <input type="range" class="price-slider" data-service="writing" min="0" max="20" value="2">
+            <span class="price-val">$50</span>
+          </div>
+        </div>
+        <div class="pricing-total-wrap">
+          <div class="pricing-total-label">Estimated Total</div>
+          <div class="pricing-total price-total">$750</div>
+          <a href="contact.html" class="btn btn-p" style="margin-top:16px">Get Exact Quote
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="price-breakdown" style="margin-top:20px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="sec" id="blog">
+    <div class="container">
+      <div class="sec-head reveal" style="text-align:center">
+        <div class="sec-label">Insights</div>
+        <h2 class="sec-title">From Our Blog</h2>
+        <p class="sec-sub">Tips, trends, and actionable advice for growing your business online.</p>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card reveal">
+          <div class="blog-img" style="background:linear-gradient(135deg,rgba(192,200,216,.12),rgba(136,146,164,.08))">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="rgba(192,200,216,.5)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Aug 15, 2026</span><span>Web Development</span></div>
+            <h3>7 Web Development Trends Reshaping Zimbabwe in 2026</h3>
+            <p>From AI-powered interfaces to Progressive Web Apps, these are the technologies transforming how Zimbabwean businesses build their online presence.</p>
+            <div class="blog-content">
+              <h4>1. Progressive Web Apps (PWAs) Are Dominating</h4>
+              <p>PWAs combine the best of web and mobile apps. They work offline, load instantly, and can be installed directly from the browser — no app store needed. For Zimbabwean businesses, this is a game-changer. Users in areas with spotty internet can still access your services. PWAs are boosting rural engagement by over 40% because they consume less data and work on low-end devices.</p>
+              <h4>2. AI-Powered Interfaces</h4>
+              <p>Chatbots, personalized recommendations, and dynamic content are no longer reserved for big corporations. Tools like ChatGPT API and open-source LLMs let even small businesses add intelligent assistants to their websites. In 2026, 45% of websites with AI chat features report higher conversion rates.</p>
+              <h4>3. Voice Search Optimization</h4>
+              <p>With smartphones proliferating across Africa, voice search is exploding. Websites optimized for conversational queries ("where can I buy building materials near me") are capturing traffic that traditional SEO misses entirely.</p>
+              <h4>4. Edge Computing for Speed</h4>
+              <p>Edge computing processes data closer to the user rather than on a distant server. For Zimbabwean users accessing sites hosted internationally, this means dramatically faster load times — often under 2 seconds.</p>
+              <h4>5. Dark Mode as Default</h4>
+              <p>Dark mode isn't just aesthetic — it reduces eye strain and saves battery on OLED devices. Over 60% of users now prefer dark mode, and search engines are beginning to factor user experience signals like this into rankings.</p>
+              <h4>6. Micro-Interactions Everywhere</h4>
+              <p>Subtle animations on buttons, form submissions, and page transitions make websites feel alive. These small touches increase engagement by up to 30% because they provide immediate visual feedback.</p>
+              <h4>7. Zero-Code and Low-Code Platforms</h4>
+              <p>Platforms like Webflow, Framer, and Bubble are empowering non-developers to build professional sites. However, custom development remains essential for complex business logic, performance optimization, and unique brand experiences.</p>
+              <p class="blog-cta">Ready to future-proof your website? <a href="contact.html">Get in touch</a> and we'll build something that stays ahead of the curve.</p>
+            </div>
+            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img" style="background:linear-gradient(135deg,rgba(168,180,200,.1),rgba(192,200,216,.06))">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="rgba(168,180,200,.5)" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Aug 8, 2026</span><span>Digital Marketing</span></div>
+            <h3>Digital Marketing on a Budget: A 2026 Guide for African SMEs</h3>
+            <p>You don't need thousands to market your business. African SMEs using AI-driven marketing tools are cutting costs by 40% while generating 2x more leads.</p>
+            <div class="blog-content">
+              <h4>1. Leverage Free AI Tools for Content Creation</h4>
+              <p>AI writing assistants can generate blog outlines, social media captions, email campaigns, and ad copy in minutes. Tools like ChatGPT, Canva's AI design suite, and CapCut's video editor are free or low-cost. African SMEs using these tools report 40% reduction in content production time and costs.</p>
+              <h4>2. WhatsApp Marketing Is Your Secret Weapon</h4>
+              <p>In Zimbabwe and across Africa, WhatsApp IS the internet for most people. Create broadcast lists, product catalogs, and automated responses. WhatsApp Business API (free for small businesses) lets you send updates to thousands at zero cost. Conversion rates from WhatsApp messages are 3-5x higher than email.</p>
+              <h4>3. Google My Business Is Free SEO</h4>
+              <p>If you have a physical location, claiming your Google My Business profile is the single highest-ROI marketing action you can take. It puts you on Google Maps, shows your hours, and lets customers leave reviews — all for free. Businesses with optimized profiles get 7x more clicks.</p>
+              <h4>4. Short-Form Video Content</h4>
+              <p>TikTok, Instagram Reels, and YouTube Shorts are the most consumed content formats in 2026. You don't need professional equipment — a smartphone and good lighting are enough. Behind-the-scenes content, product demos, and customer testimonials perform best. One viral video can generate more leads than months of paid advertising.</p>
+              <h4>5. Collaborate with Micro-Influencers</h4>
+              <p>Micro-influencers (1,000-10,000 followers) have higher engagement rates than celebrities and charge a fraction. In Zimbabwe, local influencers with 5K followers might charge $20-50 per post but deliver more targeted reach than a $500 Facebook ad campaign.</p>
+              <h4>6. Email Marketing Still Works</h4>
+              <p>For every $1 spent on email marketing, the average return is $36. Build an email list from day one using a simple sign-up form. Send weekly value-packed newsletters — not just promotions. Free tiers of Mailchimp and Brevo (formerly Sendinblue) support up to 500 contacts.</p>
+              <h4>7. Track Everything with Free Analytics</h4>
+              <p>Google Analytics 4 is free and powerful. Set up conversion tracking for form submissions, phone calls, and purchases. Without data, you're guessing. With data, you're optimizing. Most SMEs see a 25% improvement in ad performance within the first month of proper tracking.</p>
+              <p class="blog-cta">Want us to build your marketing strategy? <a href="contact.html">Let's talk</a> — we specialize in high-impact, low-budget campaigns.</p>
+            </div>
+            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img" style="background:linear-gradient(135deg,rgba(192,200,216,.08),rgba(136,146,164,.05))">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="rgba(192,200,216,.5)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Jul 29, 2026</span><span>UI/UX Design</span></div>
+            <h3>Why 71% of Mobile Apps Still Fail at UX (And How to Fix It)</h3>
+            <p>Baymard Institute's 2026 benchmark found that 71% of leading ecommerce mobile apps perform "mediocre" or worse on UX.</p>
+            <div class="blog-content">
+              <h4>The Problem: Low Standards Are the Norm</h4>
+              <p>Baymard Institute's comprehensive UX benchmark analyzed 400+ leading ecommerce apps and found that "mediocre" is the standard. Most apps are riddled with confusing navigation, hidden filters, frustrating search, and clunky checkout flows. The silver lining? The bar is low, so even moderate UX improvements can put you ahead of the majority.</p>
+              <h4>1. Onboarding Should Take Under 30 Seconds</h4>
+              <p>Every additional step in your onboarding flow costs you 20% of users. The best apps let users explore immediately with a single "Get Started" tap. Save account creation for after they've seen value. Apps that delay registration see 3x higher completion rates.</p>
+              <h4>2. Navigation Must Be Thumb-Friendly</h4>
+              <p>Over 75% of mobile interactions happen with one hand. Critical navigation elements should be within the "thumb zone" — the bottom third of the screen. Top-mounted menus and tiny buttons are UX killers. Use bottom navigation bars with 4-5 max icons.</p>
+              <h4>3. Search Needs Autocomplete and Filters</h4>
+              <p>Users who search are 2-3x more likely to convert. But only if search works well. Provide autocomplete suggestions, typo tolerance, and faceted filters. 50% of users abandon apps where search returns irrelevant results.</p>
+              <h4>4. Checkout Must Be Three Taps or Fewer</h4>
+              <p>The average cart abandonment rate on mobile is 70%. Every extra form field, page load, or unexpected step adds friction. Offer guest checkout, auto-fill addresses, and mobile payment options like EcoCash and PayPal. One-page checkout flows convert 35% better than multi-page ones.</p>
+              <h4>5. Performance Is UX</h4>
+              <p>A 1-second delay in load time reduces conversions by 7%. Users expect pages to load in under 2 seconds. Compress images, lazy-load non-critical content, and use CDN hosting. In Africa where data costs matter, optimized apps earn user loyalty.</p>
+              <p class="blog-cta">Need a mobile app that actually converts? <a href="contact.html">We build apps</a> with UX as the foundation, not an afterthought.</p>
+            </div>
+            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img" style="background:linear-gradient(135deg,rgba(168,180,200,.1),rgba(192,200,216,.08))">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="rgba(168,180,200,.5)" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v6m0 0H3m6 0h12M3 9v10a2 2 0 0 0 2 2h4m-6-12h12m0 0v10a2 2 0 0 1-2 2h-4m6-12H9"/></svg>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Jul 20, 2026</span><span>Business</span></div>
+            <h3>How AI is Helping African SMEs Grow Faster in 2026</h3>
+            <p>From chatbots handling customer inquiries to automated bookkeeping, African small businesses adopting AI are seeing 40% cost reductions within the first year.</p>
+            <div class="blog-content">
+              <h4>Why 2026 Is Africa's AI Breakthrough Year</h4>
+              <p>AI is no longer a Silicon Valley luxury. Thanks to open-source models, cloud APIs, and mobile-first tools, small businesses in Zimbabwe, Nigeria, Kenya, and South Africa are adopting AI at unprecedented rates. McKinsey reports that 72% of African enterprises have deployed AI in at least one business function — and the technology is trickling down to SMEs faster than expected.</p>
+              <h4>1. AI Chatbots for Customer Service</h4>
+              <p>Tidio, Drift, and open-source alternatives like Botpress let you add a 24/7 chatbot to your website for free. These bots handle FAQs, take orders, book appointments, and escalate complex issues to humans. SMEs using chatbots report 60% reduction in customer service costs and 35% increase in lead capture — especially after hours.</p>
+              <h4>2. Automated Bookkeeping with AI</h4>
+              <p>Tools like Wave (free), Zoho Books, and QuickBooks now use AI to categorize expenses, reconcile accounts, and generate financial reports automatically. Instead of spending 10 hours a month on books, business owners spend 2 hours reviewing AI-generated summaries. Accuracy improves by 40% because AI catches human errors.</p>
+              <h4>3. AI-Powered Marketing</h4>
+              <p>Platforms like Meta Advantage+ and Google Performance Max use AI to optimize ad targeting, bidding, and creative testing automatically. You set the budget and goal; the AI handles the rest. African businesses using AI-optimized campaigns see 45% lower cost-per-click and 2.5x higher return on ad spend compared to manual campaigns.</p>
+              <h4>4. Inventory Management</h4>
+              <p>AI-driven inventory tools predict demand based on historical sales data, seasonal trends, and even weather patterns. This prevents stockouts (lost sales) and overstocking (wasted capital). Businesses using AI inventory management report 30% reduction in carrying costs.</p>
+              <h4>5. AI Writing and Translation</h4>
+              <p>Creating content in multiple languages is now trivial. AI tools translate product descriptions, marketing copy, and customer communications into Shona, Ndebele, French, Portuguese, and more — instantly. This opens up cross-border markets that were previously inaccessible to SMEs without dedicated translation teams.</p>
+              <p class="blog-cta">Want to integrate AI into your business? <a href="contact.html">We'll help you choose</a> the right tools and implement them properly.</p>
+            </div>
+            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img" style="background:linear-gradient(135deg,rgba(192,200,216,.1),rgba(136,146,164,.06))">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="rgba(192,200,216,.5)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Jul 12, 2026</span><span>Security</span></div>
+            <h3>Cybersecurity for Small Businesses: What You Can't Afford to Ignore</h3>
+            <p>68% of cyberattacks target small businesses. In 2026, basic security hygiene isn't optional.</p>
+            <div class="blog-content">
+              <h4>Why Small Businesses Are Prime Targets</h4>
+              <p>Hackers know that small businesses have valuable data — customer records, payment information, login credentials — but typically lack dedicated IT security teams. 68% of all cyberattacks now target businesses with fewer than 100 employees. The average cost of a data breach for a small business is $120,000 — often enough to shut down permanently.</p>
+              <h4>1. SSL Certificates Are Non-Negotiable</h4>
+              <p>If your website doesn't have HTTPS (the padlock icon in the browser), Google actively penalizes your search rankings and browsers display "Not Secure" warnings to visitors. Free SSL certificates from Let's Encrypt take 5 minutes to install. There's zero excuse not to have one in 2026.</p>
+              <h4>2. Two-Factor Authentication (2FA) Everywhere</h4>
+              <p>Passwords alone are not enough. Enable 2FA on every account: email, banking, social media, hosting panels, and admin dashboards. Hardware keys (YubiKey) are best, but authenticator apps (Google Authenticator, Authy) are sufficient. 2FA blocks 99.9% of automated attacks.</p>
+              <h4>3. Backups Must Be Automated and Tested</h4>
+              <p>If your website gets ransomware'd, the only recovery is a clean backup. Automate daily backups to an off-site location (cloud storage, separate server). Test restoring from backup monthly — a backup you can't restore is worthless. Follow the 3-2-1 rule: 3 copies, 2 different media, 1 off-site.</p>
+              <h4>4. Secure Hosting Matters</h4>
+              <p>Cheap hosting often means shared servers with outdated software and no firewall. Invest in hosting that provides: automatic updates, DDoS protection, malware scanning, and regular security patches. The extra $10-20/month is insurance against attacks that could cost thousands.</p>
+              <h4>5. Train Your Team</h4>
+              <p>The #1 attack vector is human error — phishing emails, weak passwords, and social engineering. Run quarterly 15-minute security awareness sessions. Teach staff to verify suspicious emails, use password managers, and report unusual activity. A trained team is your best firewall.</p>
+              <h4>6. Keep Software Updated</h4>
+              <p>43% of cyberattacks exploit known vulnerabilities in outdated software. Enable automatic updates for your CMS (WordPress, Joomla), plugins, and operating system. Outdated WordPress plugins are the #1 attack vector for small business websites.</p>
+              <p class="blog-cta">Need a security audit for your website? <a href="contact.html">We'll check your site</a> for vulnerabilities and fix them before hackers find them.</p>
+            </div>
+            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img" style="background:linear-gradient(135deg,rgba(168,180,200,.08),rgba(192,200,216,.05))">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="rgba(168,180,200,.5)" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span>Jul 3, 2026</span><span>Strategy</span></div>
+            <h3>Mobile-First is Now Business-First: Why Your Website Must Lead on Mobile</h3>
+            <p>Over 6.3 billion people use smartphones. 88% of mobile time is spent in apps. If your website isn't designed for mobile-first, you're losing customers.</p>
+            <div class="blog-content">
+              <h4>The Numbers Don't Lie</h4>
+              <p>Mobile devices account for 68% of all web traffic globally. In Africa, that number exceeds 80%. Google now uses mobile-first indexing — meaning your mobile site IS your site for search engine purposes. If your mobile experience is a shrunken desktop, you're actively hurting your business.</p>
+              <h4>1. Design for Thumbs, Not Mice</h4>
+              <p>Desktop-first design puts navigation at the top and actions in the middle. Mobile-first design recognizes that 75% of users navigate with their thumb. Primary actions (Add to Cart, Buy Now, Contact Us) should be in the bottom third of the screen. Buttons need minimum 48px tap targets — no tiny links.</p>
+              <h4>2. Content Must Be Scannable</h4>
+              <p>Mobile users don't read — they scan. Break content into short paragraphs (2-3 sentences max). Use bullet points, bold key phrases, and clear subheadings. The inverted pyramid works: put the most important information first, details second, and background last.</p>
+              <h4>3. Images Must Be Optimized</h4>
+              <p>A 3MB hero image on desktop might be acceptable on WiFi. On a mobile network in Harare, it's a 10-second wait. Compress all images to under 200KB using WebP format. Use responsive images with srcset to serve different sizes for different screens. Lazy-load images below the fold.</p>
+              <h4>4. Forms Must Be Minimal</h4>
+              <p>Every field you add to a form reduces completion by 11%. Mobile forms should ask only for essential information. Use auto-fill, dropdown selections instead of text fields, and progress indicators for multi-step forms. Offer "Continue with WhatsApp" or "Continue with Google" for instant sign-up.</p>
+              <h4>5. Speed Under 3 Seconds Is Mandatory</h4>
+              <p>53% of mobile users abandon sites that take longer than 3 seconds to load. Test your site with Google PageSpeed Insights. Target scores above 90. Compress images, minify CSS/JS, use browser caching, and consider a CDN with nodes in Africa (like Cloudflare, which has a Johannesburg PoP).</p>
+              <h4>6. Click-to-Call and WhatsApp Integration</h4>
+              <p>Mobile users want to act immediately. Make your phone number tappable (tel: link) and your WhatsApp clickable (wa.me link). Add a floating WhatsApp button. These small touches can increase inquiries by 50% because they remove the friction of copying and pasting contact info.</p>
+              <p class="blog-cta">Is your website mobile-first? <a href="contact.html">Let us audit it</a> and show you exactly where you're losing customers.</p>
+            </div>
+            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="container">
+      <div class="sec-head reveal" style="text-align:center">
+        <div class="sec-label">FAQ</div>
+        <h2 class="sec-title">Frequently Asked Questions</h2>
+        <p class="sec-sub">Got questions? We've got answers.</p>
+      </div>
+      <div class="faq-list" style="max-width:700px;margin:0 auto">
+        <div class="faq-item reveal">
+          <button class="faq-q">How much does a website cost? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>It depends on the scope. A simple business site starts from $40, while complex e-commerce or web apps range from $500-$5,000. Use our pricing estimator above for a rough quote, or contact us for an exact figure.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">How long does it take to build a website? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Most projects are completed within 1-4 weeks. Simple sites take about a week, while larger applications can take 3-6 weeks. We always provide a timeline before starting.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you offer revisions? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes! Every project includes up to 3 rounds of revisions. We want you to be 100% satisfied with the final result.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Can you build mobile apps too? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Absolutely. We build both native and cross-platform mobile apps for Android and iOS using Flutter and React Native.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you work with clients outside Zimbabwe? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes! While we're based in Zimbabwe, we work with clients worldwide. Communication happens via email, WhatsApp, or video calls.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What's your payment structure? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>We typically require 50% upfront to begin work, with the remaining 50% due upon completion. For larger projects, we can arrange milestone-based payments.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Let's Build Something Great</h2>
+        <p>Have an idea or project that needs a digital solution? Let's talk about it.</p>
+        <a href="contact.html" class="btn btn-p">Get in Touch
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <a href="index.html"><img src="loggo.png" alt="Noel Digital Agency" height="48" loading="lazy"></a>
+          <p>Empowering businesses with end-to-end digital solutions &mdash; from web development and apps to marketing and content.</p>
+        </div>
+        <div class="ft-col">
+          <h5>Navigation</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Projects</a>
+          <a href="process.html">Process</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="ft-col">
+          <h5>Services</h5>
+          <a href="services.html#web">Web Development</a>
+          <a href="services.html#app">App Development</a>
+          <a href="services.html#digital">Digital Solutions</a>
+          <a href="services.html#marketing">Digital Marketing</a>
+          <a href="services.html#writing">Professional Writing</a>
+        </div>
+        <div class="ft-col">
+          <h5>Connect</h5>
+          <a href="mailto:chakwenyanoel0@gmail.com">chakwenyanoel0@gmail.com</a>
+          <a href="https://github.com/noeljaywolf-create" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://wa.me/263771273169" target="_blank" rel="noopener noreferrer">WhatsApp: 077 127 3169</a>
+          <a href="https://www.linkedin.com/in/noel-chakwenya" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>&copy; 2026 Noel Digital Agency. All Rights Reserved.</p>
+        <p>Crafted with precision</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/263771273169" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+    <span class="wa-float-pulse"></span>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="btt" id="btt" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Cursor Trail -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Social Proof -->
+  <div class="social-proof">
+    <span class="sp-dot"></span>
+    <span><strong>Tatenda</strong> from Harare just requested a quote</span>
+  </div>
+
+  <!-- Blog Modal -->
+  <div class="blog-modal" id="blogModal">
+    <div class="blog-modal-overlay" data-close="modal"></div>
+    <div class="blog-modal-content">
+      <button class="blog-modal-close" data-close="modal">&times;</button>
+      <div class="blog-modal-head">
+        <div class="blog-modal-meta" id="blogModalMeta"></div>
+        <h2 class="blog-modal-title" id="blogModalTitle"></h2>
+      </div>
+      <div class="blog-modal-body" id="blogModalBody"></div>
+      <div class="blog-modal-footer">
+        <span>Written by <strong>Noel Digital Agency</strong></span>
+        <a href="#blog" class="btn btn-s" data-close="modal">← Back to Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const topnav = document.getElementById('topnav');
+
+    menuBtn.addEventListener('click', () => {
+      topnav.classList.toggle('active');
+    });
+
+    topnav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        topnav.classList.remove('active');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('vis');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Preloader
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var pl = document.getElementById('preloader');
+      if (pl) pl.classList.add('done');
+    }, 1200);
+  });
+
+  // Back to Top
+  var btt = document.getElementById('btt');
+  if (btt) {
+    window.addEventListener('scroll', function() {
+      btt.classList.toggle('show', window.scrollY > 400);
+    });
+    btt.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  }
+
+    // Theme Toggle
+    var themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light');
+        themeToggle.querySelector('.theme-label').textContent = 'Dark';
+      }
+      themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('light');
+        var isLight = document.body.classList.contains('light');
+        themeToggle.querySelector('.theme-label').textContent = isLight ? 'Dark' : 'Light';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      });
+    }
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+</script>
+
+  <script src="advanced-effects.js" defer></script>
+  <script src="creative-features.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+</body>
+</html>
