@@ -336,16 +336,20 @@
       this.render();
     },
 
+    frameCount: 0,
     render() {
-      const img = this.ctx.createImageData(256, 256);
-      for (let i = 0; i < img.data.length; i += 4) {
-        const v = Math.random() * 255;
-        img.data[i] = v;
-        img.data[i + 1] = v;
-        img.data[i + 2] = v;
-        img.data[i + 3] = 255;
+      this.frameCount++;
+      if (this.frameCount % 3 === 0) {
+        const img = this.ctx.createImageData(256, 256);
+        for (let i = 0; i < img.data.length; i += 4) {
+          const v = Math.random() * 255;
+          img.data[i] = v;
+          img.data[i + 1] = v;
+          img.data[i + 2] = v;
+          img.data[i + 3] = 255;
+        }
+        this.ctx.putImageData(img, 0, 0);
       }
-      this.ctx.putImageData(img, 0, 0);
       requestAnimationFrame(() => this.render());
     }
   };
@@ -492,14 +496,11 @@
         const obs = new IntersectionObserver(entries => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              el.style.opacity = '1';
-              el.style.transform = 'none';
+              el.classList.add('label-vis');
             }
           });
         }, { threshold: 0.5 });
-        el.style.opacity = '0';
-        el.style.transform = 'translateX(-10px)';
-        el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.classList.add('label-reveal');
         obs.observe(el);
       });
     }
