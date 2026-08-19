@@ -20,19 +20,6 @@
       this.overlay.innerHTML = '<div class="morph-circle"></div>';
       document.body.appendChild(this.overlay);
 
-      // Intercept all internal links
-      document.addEventListener('click', e => {
-        const link = e.target.closest('a[href]');
-        if (!link) return;
-        const href = link.getAttribute('href');
-        if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || href.startsWith('javascript')) return;
-        if (link.target === '_blank') return;
-
-        e.preventDefault();
-        this.overlay.classList.add('active');
-        setTimeout(() => { window.location.href = href; }, 500);
-      });
-
       // On load, animate in
       this.overlay.classList.add('entering');
       setTimeout(() => this.overlay.classList.remove('entering'), 600);
