@@ -843,11 +843,13 @@
 
     if (menuBtn && topnav) {
       menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
         topnav.classList.toggle('active');
       });
 
       topnav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
+          menuBtn.classList.remove('active');
           topnav.classList.remove('active');
         });
       });

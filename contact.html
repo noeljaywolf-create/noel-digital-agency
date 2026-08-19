@@ -220,8 +220,8 @@
 
   <script>
     var menuBtn=document.getElementById('menuBtn'),topnav=document.getElementById('topnav');
-    if(menuBtn)menuBtn.addEventListener('click',function(){topnav.classList.toggle('active')});
-    if(topnav)topnav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){topnav.classList.remove('active')})});
+    if(menuBtn)menuBtn.addEventListener('click',function(){menuBtn.classList.toggle('active');topnav.classList.toggle('active')});
+    if(topnav)topnav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){menuBtn.classList.remove('active');topnav.classList.remove('active')})});
     window.addEventListener('scroll',function(){document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>50)});
     var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:.15});
     document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
