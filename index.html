@@ -7,21 +7,30 @@
   <meta name="color-scheme" content="dark">
   <title>Noel Digital Agency – Digital Solutions Specialist</title>
   <meta name="description" content="Noel Digital Agency – Professional web development, app creation, UI/UX design, digital marketing, and professional writing by Noel Chakwenya from Zimbabwe." />
+  <link rel="icon" href="loggo.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Noel Digital Agency">
+  <meta property="og:title" content="Noel Digital Agency – Digital Solutions Specialist">
+  <meta property="og:description" content="Professional web development, app creation, UI/UX design, digital marketing, and professional writing by Noel Chakwenya from Zimbabwe.">
+  <meta property="og:image" content="loggo.png">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
 
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="advanced-effects.js" as="script">
-  <link rel="preload" href="creative-features.js" as="script">
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <link rel="preload" href="styles.css?v=3" as="style">
+  <link rel="preload" href="advanced-effects.js?v=3" as="script">
+  <link rel="preload" href="creative-features.js?v=3" as="script">
+  <link rel="stylesheet" href="styles.css?v=3" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"></noscript>
   <style>
     .preloader{position:fixed;inset:0;z-index:99999;background:#001327;display:flex;flex-direction:column;align-items:center;justify-content:center}
     .preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+    @keyframes forceReveal{to{opacity:1!important;transform:none!important}}
+    .reveal{animation:forceReveal 0s 3s forwards}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     :root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
     html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -63,14 +72,14 @@
   <header class="topbar" id="topbar">
     <div class="topbar-strip">
       <div class="topbar-strip-left">
-        <a href="index.html"><img src="loggo.png" alt="Noel Digital Agency" loading="lazy" width="52" height="52"></a>
+        <a href="index.html"><img src="loggo.png" alt="Noel Digital Agency" width="52" height="52"></a>
       </div>
       <div class="topbar-strip-right">
         <a href="tel:+263771273169">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           +263 77 127 3169
         </a>
-        <a href="https://wa.me/263771273169" target="_blank" class="wa-link">
+        <a href="https://wa.me/263771273169" target="_blank" rel="noopener noreferrer" class="wa-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
         </a>
@@ -126,7 +135,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="loggo.png">
       <source src="hero-bg.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
@@ -290,7 +299,7 @@
       <div class="sec-head reveal">
         <div class="sec-label">What We Do</div>
         <h2 class="sec-title">Comprehensive Digital Services</h2>
-        <p class="sec-sub">From concept to launch, We handle every aspect of your digital presence.</p>
+        <p class="sec-sub">From concept to launch, we handle every aspect of your digital presence.</p>
       </div>
       <div class="svc-grid">
         <div class="svc-card tilt reveal">
@@ -320,6 +329,20 @@
           </div>
           <h3>Digital Marketing</h3>
           <p>SEO, social media marketing, Google ads, content marketing, and analytics-driven strategies.</p>
+        </div>
+        <div class="svc-card tilt reveal">
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>User research, wireframes, and high-fidelity prototypes in Figma — designed for conversion and clarity.</p>
+        </div>
+        <div class="svc-card tilt reveal">
+          <div class="svc-ico">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Professional Writing</h3>
+          <p>Website copy, blog articles, business plans, and technical documentation that converts readers into clients.</p>
         </div>
       </div>
     </div>
@@ -380,7 +403,7 @@
             <h4>The Results</h4>
             <p>Online bookings increased 3x within the first month. The bounce rate dropped 40% thanks to the immersive gallery and video hero. Page load time stays under 2 seconds on mobile — critical for Tembisa's mobile-first audience.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" class="case-link">View Live Project →</a>
+          <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" rel="noopener noreferrer" class="case-link">View Live Project →</a>
         </div>
 
         <!-- Extreme Fire Design -->
@@ -394,7 +417,7 @@
             <div class="case-detail"><strong>Tech</strong><span>HTML5, CSS3, JavaScript, PHP, WhatsApp API</span></div>
           </div>
           <div class="case-metrics">
-            <div class="case-metric"><strong>5s</strong><span>Avg. Session</span></div>
+            <div class="case-metric"><strong>5m+</strong><span>Avg. Session</span></div>
             <div class="case-metric"><strong>60%</strong><span>Contact Rate</span></div>
             <div class="case-metric"><strong>100</strong><span>Lighthouse Score</span></div>
           </div>
@@ -408,9 +431,9 @@
           </div>
           <div class="case-results">
             <h4>The Results</h4>
-            <p>Average session duration jumped to 5 seconds (up from 30 seconds on the old site). Contact form submissions increased 60%. The site achieved a perfect 100 Lighthouse score. The WhatsApp chatbot handles 40% of initial enquiries automatically.</p>
+            <p>Average session duration jumped to 5+ minutes (up from under 30 seconds on the old site). Contact form submissions increased 60%. The site achieved a perfect 100 Lighthouse score. The WhatsApp chatbot handles 40% of initial enquiries automatically.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" class="case-link">View Live Project →</a>
+          <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" rel="noopener noreferrer" class="case-link">View Live Project →</a>
         </div>
 
         <!-- SkyPath Airport UI -->
@@ -440,7 +463,7 @@
             <h4>The Results</h4>
             <p>Prototype testing showed 90% user satisfaction and 35% faster gate navigation. The dynamic gate-change system re-routes passengers instantly. Multi-language support covers 95% of the airport's passenger demographics. Currently in development — full deployment planned for 2027.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" class="case-link">View Demo →</a>
+          <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" rel="noopener noreferrer" class="case-link">View Demo →</a>
         </div>
 
         <!-- C.N. Cube Consulting -->
@@ -470,7 +493,7 @@
             <h4>The Results</h4>
             <p>Lead inquiries doubled within the first month. The site ranks #1 for "electrical consulting engineers Bulawayo" on Google. Mobile score hit 100 — critical since 80% of their traffic comes from mobile devices. The professional presence helped them secure their first contract outside Bulawayo.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" class="case-link">View Live Project →</a>
+          <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" rel="noopener noreferrer" class="case-link">View Live Project →</a>
         </div>
 
       </div>
@@ -560,7 +583,7 @@
               <p>Platforms like Webflow, Framer, and Bubble are empowering non-developers to build professional sites. However, custom development remains essential for complex business logic, performance optimization, and unique brand experiences.</p>
               <p class="blog-cta">Ready to future-proof your website? <a href="contact.html">Get in touch</a> and we'll build something that stays ahead of the curve.</p>
             </div>
-            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+            <button type="button" class="blog-read" onclick="toggleBlog(event, this)">Read More →</button>
           </div>
         </article>
 
@@ -589,7 +612,7 @@
               <p>Google Analytics 4 is free and powerful. Set up conversion tracking for form submissions, phone calls, and purchases. Without data, you're guessing. With data, you're optimizing. Most SMEs see a 25% improvement in ad performance within the first month of proper tracking.</p>
               <p class="blog-cta">Want us to build your marketing strategy? <a href="contact.html">Let's talk</a> — we specialize in high-impact, low-budget campaigns.</p>
             </div>
-            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+            <button type="button" class="blog-read" onclick="toggleBlog(event, this)">Read More →</button>
           </div>
         </article>
 
@@ -616,7 +639,7 @@
               <p>A 1-second delay in load time reduces conversions by 7%. Users expect pages to load in under 2 seconds. Compress images, lazy-load non-critical content, and use CDN hosting. In Africa where data costs matter, optimized apps earn user loyalty.</p>
               <p class="blog-cta">Need a mobile app that actually converts? <a href="contact.html">We build apps</a> with UX as the foundation, not an afterthought.</p>
             </div>
-            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+            <button type="button" class="blog-read" onclick="toggleBlog(event, this)">Read More →</button>
           </div>
         </article>
 
@@ -643,7 +666,7 @@
               <p>Creating content in multiple languages is now trivial. AI tools translate product descriptions, marketing copy, and customer communications into Shona, Ndebele, French, Portuguese, and more — instantly. This opens up cross-border markets that were previously inaccessible to SMEs without dedicated translation teams.</p>
               <p class="blog-cta">Want to integrate AI into your business? <a href="contact.html">We'll help you choose</a> the right tools and implement them properly.</p>
             </div>
-            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+            <button type="button" class="blog-read" onclick="toggleBlog(event, this)">Read More →</button>
           </div>
         </article>
 
@@ -672,7 +695,7 @@
               <p>43% of cyberattacks exploit known vulnerabilities in outdated software. Enable automatic updates for your CMS (WordPress, Joomla), plugins, and operating system. Outdated WordPress plugins are the #1 attack vector for small business websites.</p>
               <p class="blog-cta">Need a security audit for your website? <a href="contact.html">We'll check your site</a> for vulnerabilities and fix them before hackers find them.</p>
             </div>
-            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+            <button type="button" class="blog-read" onclick="toggleBlog(event, this)">Read More →</button>
           </div>
         </article>
 
@@ -701,7 +724,7 @@
               <p>Mobile users want to act immediately. Make your phone number tappable (tel: link) and your WhatsApp clickable (wa.me link). Add a floating WhatsApp button. These small touches can increase inquiries by 50% because they remove the friction of copying and pasting contact info.</p>
               <p class="blog-cta">Is your website mobile-first? <a href="contact.html">Let us audit it</a> and show you exactly where you're losing customers.</p>
             </div>
-            <a href="#" class="blog-read" onclick="toggleBlog(event, this)">Read More →</a>
+            <button type="button" class="blog-read" onclick="toggleBlog(event, this)">Read More →</button>
           </div>
         </article>
 
@@ -780,9 +803,11 @@
           <h5>Services</h5>
           <a href="services.html">Web Development</a>
           <a href="services.html">App Development</a>
+          <a href="services.html">UI/UX Design</a>
           <a href="services.html">Digital Solutions</a>
           <a href="services.html">Digital Marketing</a>
           <a href="services.html">Professional Writing</a>
+          <a href="services.html">Brand Identity</a>
         </div>
         <div class="ft-col">
           <h5>Connect</h5>
@@ -800,7 +825,7 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/263771273169" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/263771273169" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
     <span class="wa-float-pulse"></span>
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
@@ -813,12 +838,6 @@
   <!-- Cursor Trail -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- Social Proof -->
-  <div class="social-proof">
-    <span class="sp-dot"></span>
-    <span><strong>Tatenda</strong> from Harare just requested a quote</span>
-  </div>
 
   <!-- Blog Modal -->
   <div class="blog-modal" id="blogModal">
@@ -842,15 +861,17 @@
     const menuBtn = document.getElementById('menuBtn');
     const topnav = document.getElementById('topnav');
 
-    menuBtn.addEventListener('click', () => {
-      topnav.classList.toggle('active');
-    });
-
-    topnav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        topnav.classList.remove('active');
+    if (menuBtn && topnav) {
+      menuBtn.addEventListener('click', () => {
+        topnav.classList.toggle('active');
       });
-    });
+
+      topnav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          topnav.classList.remove('active');
+        });
+      });
+    }
 
     window.addEventListener('scroll', () => {
       document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 50);
@@ -907,15 +928,22 @@
       btn.addEventListener('click', function() {
         var item = this.parentElement;
         var wasOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
-        if (!wasOpen) item.classList.add('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        }
       });
+      btn.setAttribute('aria-expanded', 'false');
     });
 
 </script>
 
-  <script src="advanced-effects.js" defer></script>
-  <script src="creative-features.js" defer></script>
+  <script src="advanced-effects.js?v=3" defer></script>
+  <script src="creative-features.js?v=3" defer></script>
 
 
 </body>

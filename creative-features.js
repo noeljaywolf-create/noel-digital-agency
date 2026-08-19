@@ -9,21 +9,10 @@
   const $$ = (s, p) => [...(p || document).querySelectorAll(s)];
 
   /* ═══════════════════════════════════════════════════════════════
-     1. PAGE MORPH TRANSITIONS
+     1. PAGE MORPH TRANSITIONS — REMOVED (caused navigation failures)
      ═══════════════════════════════════════════════════════════════ */
   const pageTransition = {
-    overlay: null,
-
-    init() {
-      this.overlay = document.createElement('div');
-      this.overlay.className = 'page-morph';
-      this.overlay.innerHTML = '<div class="morph-circle"></div>';
-      document.body.appendChild(this.overlay);
-
-      // On load, animate in
-      this.overlay.classList.add('entering');
-      setTimeout(() => this.overlay.classList.remove('entering'), 600);
-    }
+    init() {}
   };
 
   /* ═══════════════════════════════════════════════════════════════
