@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
-  <link rel="preload" href="hero-bg.mp4" as="video" type="video/mp4">
+
   <link rel="preload" href="styles.css" as="style">
   <link rel="preload" href="advanced-effects.js" as="script">
   <link rel="preload" href="creative-features.js" as="script">
@@ -126,7 +126,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
       <source src="hero-bg.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
@@ -778,11 +778,11 @@
         </div>
         <div class="ft-col">
           <h5>Services</h5>
-          <a href="services.html#web">Web Development</a>
-          <a href="services.html#app">App Development</a>
-          <a href="services.html#digital">Digital Solutions</a>
-          <a href="services.html#marketing">Digital Marketing</a>
-          <a href="services.html#writing">Professional Writing</a>
+          <a href="services.html">Web Development</a>
+          <a href="services.html">App Development</a>
+          <a href="services.html">Digital Solutions</a>
+          <a href="services.html">Digital Marketing</a>
+          <a href="services.html">Professional Writing</a>
         </div>
         <div class="ft-col">
           <h5>Connect</h5>
@@ -918,7 +918,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(() => {});
+        navigator.serviceWorker.register('sw.js').catch(() => {});
       });
     }
   </script>
