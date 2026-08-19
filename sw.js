@@ -1,21 +1,26 @@
-const CACHE_NAME = 'noel-digital-v1';
+const CACHE_NAME = 'noel-digital-v2';
+const BASE = self.registration.scope.replace(/\/?$/, '/');
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/about.html',
-  '/services.html',
-  '/portfolio.html',
-  '/contact.html',
-  '/process.html',
-  '/styles.css',
-  '/advanced-effects.js',
-  '/creative-features.js',
-  '/loggo.png',
-  '/hero-bg.mp4'
+  '',
+  'index.html',
+  'about.html',
+  'services.html',
+  'portfolio.html',
+  'contact.html',
+  'process.html',
+  'styles.css',
+  'advanced-effects.js',
+  'creative-features.js',
+  'loggo.png',
+  'hero-bg.mp4'
 ];
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS)));
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(c =>
+      Promise.allSettled(ASSETS.map(a => c.add(new URL(a, BASE).href)))
+    )
+  );
   self.skipWaiting();
 });
 
