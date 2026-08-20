@@ -1,0 +1,22 @@
+{
+  "name": "Noel Digital Agency",
+  "short_name": "Noel Digital",
+  "description": "Professional web development, app creation, UI/UX design, digital marketing, and professional writing by Noel Chakwenya from Zimbabwe.",
+  "start_url": "/noel-digital-agency/index.html",
+  "display": "standalone",
+  "background_color": "#0E1525",
+  "theme_color": "#0E1525",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "loggo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "loggo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

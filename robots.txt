@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /sw.js
+
+Sitemap: https://noeljaywolf-create.github.io/noel-digital-agency/sitemap.xml
