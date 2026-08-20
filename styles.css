@@ -464,7 +464,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none;bor
 .blog-card.expanded{grid-column:1/-1;max-width:none;border-color:rgba(192,200,216,.12);box-shadow:0 0 60px rgba(192,200,216,.06)}
 .blog-card.expanded .blog-img{height:120px}
 .blog-card.expanded .blog-body{max-width:800px;margin:0 auto;padding:32px 24px}
-.blog-img{height:160px;display:flex;align-items:center;justify-content:center;transition:height .4s var(--ease)}
+.blog-img{height:160px;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;transition:height .4s var(--ease)}
 .blog-body{padding:24px}
 .blog-meta{display:flex;gap:12px;margin-bottom:12px}
 .blog-meta span{font-size:.65rem;color:var(--grey);text-transform:uppercase;letter-spacing:1px;font-weight:600}
