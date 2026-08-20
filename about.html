@@ -22,7 +22,34 @@
   <link rel="preload" href="loggo.png" as="image">
   <link rel="stylesheet" href="styles.css?v=6">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
-  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}body{font-family:var(--font);background:var(--dark-navy);color:var(--off);line-height:1.65;overflow-x:hidden;padding-top:116px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{max-width:1140px;margin:0 auto;padding:0 24px}.topbar{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--deep-navy);border-bottom:1px solid rgba(192,200,216,.08)}.topbar-strip{display:flex;justify-content:space-between;align-items:center;padding:8px 40px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem}.topbar-strip-left{display:flex;align-items:center;gap:6px}.topbar-strip-left img{height:52px;width:auto}.topbar-strip-right{display:flex;align-items:center;gap:20px}.topbar-strip-right a{color:var(--silver);display:flex;align-items:center;gap:5px;transition:color .2s}.topbar-strip-right svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}.topbar-strip-right .wa-link{color:#25D366}.topbar-main{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:52px}.topbar-nav{display:flex;gap:2px;align-items:center}.topbar-nav a{padding:8px 14px;font-size:.8rem;font-weight:500;color:var(--silver);border-radius:6px;transition:all .2s;white-space:nowrap}.topbar-actions{display:flex;align-items:center;gap:12px}.topbar-cta{background:var(--grad);color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:600!important;font-size:.8rem!important}.sec{padding:80px 0}</style>
+  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}body{font-family:var(--font);background:var(--dark-navy);color:var(--off);line-height:1.65;overflow-x:hidden;padding-top:116px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{max-width:1140px;margin:0 auto;padding:0 24px}.topbar{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--deep-navy);border-bottom:1px solid rgba(192,200,216,.08)}.topbar-strip{display:flex;justify-content:space-between;align-items:center;padding:8px 40px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem}.topbar-strip-left{display:flex;align-items:center;gap:6px}.topbar-strip-left img{height:52px;width:auto}.topbar-strip-right{display:flex;align-items:center;gap:20px}.topbar-strip-right a{color:var(--silver);display:flex;align-items:center;gap:5px;transition:color .2s}.topbar-strip-right svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}.topbar-strip-right .wa-link{color:#25D366}.topbar-main{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:52px}.topbar-nav{display:flex;gap:2px;align-items:center}.topbar-nav a{padding:8px 14px;font-size:.8rem;font-weight:500;color:var(--silver);border-radius:6px;transition:all .2s;white-space:nowrap}.topbar-actions{display:flex;align-items:center;gap:12px}.topbar-cta{background:var(--grad);color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:600!important;font-size:.8rem!important}.sec{padding:80px 0}
+    .about-hero{position:relative;padding:60px 0 80px;overflow:hidden}
+    .about-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(192,200,216,.06),transparent 70%);border-radius:50%;pointer-events:none}
+    .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+    .about-photo-wrap{position:relative;display:flex;justify-content:center}
+    .about-photo-frame{position:relative;width:100%;max-width:420px;aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:2px solid rgba(192,200,216,.12);box-shadow:0 30px 60px rgba(0,0,0,.4),0 0 0 1px rgba(192,200,216,.05)}
+    .about-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+    .about-photo-glow{position:absolute;inset:-2px;border-radius:26px;background:var(--grad);opacity:0;transition:opacity .5s;pointer-events:none;z-index:-1}
+    .about-photo-wrap:hover .about-photo-glow{opacity:.15}
+    .about-badge{position:absolute;background:var(--corp-navy);border:1px solid rgba(192,200,216,.12);border-radius:14px;padding:12px 18px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:aboutBadgeFloat 4s ease-in-out infinite}
+    .about-badge-1{bottom:20px;left:-20px;animation-delay:0s}
+    .about-badge-2{top:20px;right:-20px;animation-delay:1.5s}
+    .about-badge-ico{width:36px;height:36px;border-radius:10px;background:rgba(192,200,216,.08);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .about-badge-text strong{display:block;font-size:.72rem;color:var(--white);font-weight:600}
+    .about-badge-text span{font-size:.65rem;color:var(--grey)}
+    @keyframes aboutBadgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    .about-text h3{font-family:var(--display);font-size:1.8rem;color:var(--white);margin-bottom:8px;font-weight:700}
+    .about-text .about-role{color:var(--accent);font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;display:block}
+    .about-text p{color:var(--silver);margin-bottom:16px;font-size:.92rem;line-height:1.8}
+    .about-stats-row{display:flex;gap:20px;margin:28px 0}
+    .about-stat{text-align:center;padding:16px 20px;background:rgba(24,43,61,.5);border:1px solid rgba(255,255,255,.04);border-radius:14px;flex:1}
+    .about-stat strong{font-family:var(--display);font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+    .about-stat span{font-size:.68rem;color:var(--grey);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+    .about-tech-title{font-family:var(--display);color:var(--white);font-size:1rem;margin-bottom:12px;font-weight:600}
+    .about-tech-grid{display:flex;flex-wrap:wrap;gap:8px}
+    .about-tech-tag{background:rgba(192,200,216,.06);border:1px solid rgba(192,200,216,.1);padding:7px 16px;border-radius:100px;font-size:.75rem;color:var(--accent-l);font-weight:500;transition:all .25s}
+    .about-tech-tag:hover{background:rgba(192,200,216,.12);border-color:rgba(192,200,216,.2);transform:translateY(-1px)}
+    @media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:40px}.about-photo-frame{max-width:320px;margin:0 auto}.about-badge{display:none}.about-stats-row{gap:12px}.about-stat{padding:12px 14px}.about-stat strong{font-size:1.2rem}}</style>
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -58,32 +85,49 @@
   </header>
   <div class="marquee"><div class="marquee-track"><span>Web Development</span><i>&#9670;</i><span>App Development</span><i>&#9670;</i><span>UI/UX Design</span><i>&#9670;</i><span>Digital Marketing</span><i>&#9670;</i><span>Professional Writing</span><i>&#9670;</i><span>Digital Solutions</span><i>&#9670;</i><span>Web Development</span><i>&#9670;</i><span>App Development</span><i>&#9670;</i><span>UI/UX Design</span><i>&#9670;</i><span>Digital Marketing</span><i>&#9670;</i><span>Professional Writing</span><i>&#9670;</i><span>Digital Solutions</span><i>&#9670;</i></div></div>
 
-  <section class="sec">
+  <section class="about-hero">
     <div class="container">
       <div class="sec-head reveal" style="text-align:center">
         <div class="sec-label">About Us</div>
         <h2 class="sec-title">The Person Behind the Pixels</h2>
         <p class="sec-sub">Meet the digital architect building the future of Zimbabwe's online presence.</p>
       </div>
-      <div class="about-layout">
-        <div class="reveal" style="text-align:center">
-          <img src="about-photo.png" alt="Noel Chakwenya" width="400" height="400" style="border-radius:20px;width:100%;max-width:400px;margin:0 auto">
+      <div class="about-grid" style="margin-top:48px">
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo-frame">
+            <img src="about-photo.png" alt="Noel Chakwenya" width="420" height="525" loading="lazy">
+          </div>
+          <div class="about-photo-glow"></div>
+          <div class="about-badge about-badge-1">
+            <div class="about-badge-ico">&#128187;</div>
+            <div class="about-badge-text"><strong>4 Projects</strong><span>Delivered</span></div>
+          </div>
+          <div class="about-badge about-badge-2">
+            <div class="about-badge-ico">&#11088;</div>
+            <div class="about-badge-text"><strong>100%</strong><span>Satisfaction</span></div>
+          </div>
         </div>
-        <div class="reveal">
-          <h3 style="font-family:var(--display);font-size:1.6rem;color:var(--white);margin-bottom:16px">Noel Chakwenya</h3>
-          <p style="color:var(--silver);margin-bottom:12px;font-size:.92rem;line-height:1.75">Noel is a passionate Digital Solutions Specialist based in Zimbabwe. With a deep love for technology and design, he helps businesses transform their digital presence through innovative web development, mobile applications, and strategic digital marketing.</p>
-          <p style="color:var(--silver);margin-bottom:24px;font-size:.92rem;line-height:1.75">At Noel Digital Agency, we believe every business deserves a world-class digital experience. From startups in Harare to enterprises across Africa, we deliver solutions that drive real results.</p>
-          <h4 style="font-family:var(--display);color:var(--white);font-size:1rem;margin-bottom:12px">Tech Stack</h4>
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">HTML5</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">CSS3</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">JavaScript</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">React</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">Node.js</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">Flutter</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">Python</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">Figma</span>
-            <span style="background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.12);padding:6px 14px;border-radius:100px;font-size:.75rem;color:var(--accent-l)">WordPress</span>
+        <div class="about-text reveal">
+          <h3>Noel Chakwenya</h3>
+          <span class="about-role">Founder & Digital Solutions Specialist</span>
+          <p>Noel is a passionate Digital Solutions Specialist based in Zimbabwe. With a deep love for technology and design, he helps businesses transform their digital presence through innovative web development, mobile applications, and strategic digital marketing.</p>
+          <p>At Noel Digital Agency, we believe every business deserves a world-class digital experience. From startups in Harare to enterprises across Africa, we deliver solutions that drive real results.</p>
+          <div class="about-stats-row">
+            <div class="about-stat"><strong>4+</strong><span>Projects</span></div>
+            <div class="about-stat"><strong>100</strong><span>Lighthouse</span></div>
+            <div class="about-stat"><strong>24h</strong><span>Response</span></div>
+          </div>
+          <div class="about-tech-title">Tech Stack</div>
+          <div class="about-tech-grid">
+            <span class="about-tech-tag">HTML5</span>
+            <span class="about-tech-tag">CSS3</span>
+            <span class="about-tech-tag">JavaScript</span>
+            <span class="about-tech-tag">React</span>
+            <span class="about-tech-tag">Node.js</span>
+            <span class="about-tech-tag">Flutter</span>
+            <span class="about-tech-tag">Python</span>
+            <span class="about-tech-tag">Figma</span>
+            <span class="about-tech-tag">WordPress</span>
           </div>
         </div>
       </div>

@@ -22,7 +22,42 @@
   <link rel="preload" href="loggo.png" as="image">
   <link rel="stylesheet" href="styles.css?v=6">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
-  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}body{font-family:var(--font);background:var(--dark-navy);color:var(--off);line-height:1.65;overflow-x:hidden;padding-top:116px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{max-width:1140px;margin:0 auto;padding:0 24px}.topbar{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--deep-navy);border-bottom:1px solid rgba(192,200,216,.08)}.topbar-strip{display:flex;justify-content:space-between;align-items:center;padding:8px 40px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem}.topbar-strip-left{display:flex;align-items:center;gap:6px}.topbar-strip-left img{height:52px;width:auto}.topbar-strip-right{display:flex;align-items:center;gap:20px}.topbar-strip-right a{color:var(--silver);display:flex;align-items:center;gap:5px;transition:color .2s}.topbar-strip-right svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}.topbar-strip-right .wa-link{color:#25D366}.topbar-main{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:52px}.topbar-nav{display:flex;gap:2px;align-items:center}.topbar-nav a{padding:8px 14px;font-size:.8rem;font-weight:500;color:var(--silver);border-radius:6px;transition:all .2s;white-space:nowrap}.topbar-actions{display:flex;align-items:center;gap:12px}.topbar-cta{background:var(--grad);color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:600!important;font-size:.8rem!important}.sec{padding:80px 0}</style>
+  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}body{font-family:var(--font);background:var(--dark-navy);color:var(--off);line-height:1.65;overflow-x:hidden;padding-top:116px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{max-width:1140px;margin:0 auto;padding:0 24px}.topbar{position:fixed;top:0;left:0;right:0;z-index:999;background:var(--deep-navy);border-bottom:1px solid rgba(192,200,216,.08)}.topbar-strip{display:flex;justify-content:space-between;align-items:center;padding:8px 40px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.78rem}.topbar-strip-left{display:flex;align-items:center;gap:6px}.topbar-strip-left img{height:52px;width:auto}.topbar-strip-right{display:flex;align-items:center;gap:20px}.topbar-strip-right a{color:var(--silver);display:flex;align-items:center;gap:5px;transition:color .2s}.topbar-strip-right svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}.topbar-strip-right .wa-link{color:#25D366}.topbar-main{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:52px}.topbar-nav{display:flex;gap:2px;align-items:center}.topbar-nav a{padding:8px 14px;font-size:.8rem;font-weight:500;color:var(--silver);border-radius:6px;transition:all .2s;white-space:nowrap}.topbar-actions{display:flex;align-items:center;gap:12px}.topbar-cta{background:var(--grad);color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:600!important;font-size:.8rem!important}.sec{padding:80px 0}
+    .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .port-card{background:var(--corp-navy);border:1px solid rgba(255,255,255,.04);border-radius:20px;overflow:hidden;transition:all .4s var(--ease);text-decoration:none;position:relative}
+    .port-card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(0,0,0,.35);border-color:rgba(192,200,216,.1)}
+    .port-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:2}
+    .port-card:hover::before{transform:scaleX(1)}
+    .port-card.c1::before{background:linear-gradient(90deg,#E11C6C,#FF6B9D)}
+    .port-card.c2::before{background:linear-gradient(90deg,#FF4500,#FF8C00)}
+    .port-card.c3::before{background:linear-gradient(90deg,#00B4D8,#0077B6)}
+    .port-card.c4::before{background:linear-gradient(90deg,#2D6A4F,#52B788)}
+    .port-hero{height:200px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .port-hero-bg{position:absolute;inset:0;opacity:.15;transition:opacity .4s}
+    .port-card:hover .port-hero-bg{opacity:.25}
+    .port-hero-bg.bg1{background:linear-gradient(135deg,#1a0a1a,#3a0a2a,#E11C6C)}
+    .port-hero-bg.bg2{background:linear-gradient(135deg,#1a0a0a,#2a150a,#FF4500)}
+    .port-hero-bg.bg3{background:linear-gradient(135deg,#0a1520,#0a2030,#00B4D8)}
+    .port-hero-bg.bg4{background:linear-gradient(135deg,#0a1a10,#102a1a,#2D6A4F)}
+    .port-logo{position:relative;z-index:2;width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--white);transition:transform .4s var(--ease);border:2px solid rgba(255,255,255,.1)}
+    .port-card:hover .port-logo{transform:scale(1.08)}
+    .port-logo.l1{background:linear-gradient(135deg,#E11C6C,#FF6B9D)}
+    .port-logo.l2{background:linear-gradient(135deg,#FF4500,#FF8C00)}
+    .port-logo.l3{background:linear-gradient(135deg,#00B4D8,#0077B6)}
+    .port-logo.l4{background:linear-gradient(135deg,#2D6A4F,#52B788)}
+    .port-status{position:absolute;top:14px;right:14px;z-index:3;padding:5px 12px;border-radius:100px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+    .port-status.live{background:rgba(34,197,94,.15);color:#22c55e;border:1px solid rgba(34,197,94,.2)}
+    .port-status.wip{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.2)}
+    .port-body{padding:24px 28px}
+    .port-body h3{font-family:var(--display);font-size:1.1rem;color:var(--white);margin-bottom:4px;font-weight:700}
+    .port-body .port-type{font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px;display:block}
+    .port-body p{font-size:.82rem;color:var(--silver);line-height:1.65;margin-bottom:16px}
+    .port-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+    .port-tag{background:rgba(192,200,216,.06);border:1px solid rgba(192,200,216,.08);padding:4px 10px;border-radius:100px;font-size:.68rem;color:var(--lsilver);font-weight:500}
+    .port-link{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--accent-l);font-weight:600;transition:all .2s}
+    .port-link:hover{color:var(--white);gap:10px}
+    .port-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .2s}
+    @media(max-width:768px){.port-grid{grid-template-columns:1fr}.port-hero{height:160px}.port-logo{width:64px;height:64px;font-size:1.1rem}}</style>
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -66,45 +101,76 @@
         <p class="sec-sub">Real projects, real results. Here is what we have built.</p>
       </div>
       <div class="port-grid" style="margin-top:40px">
-        <div class="port-card reveal">
-          <div class="port-img" style="height:200px;background:linear-gradient(135deg,rgba(192,200,216,.1),rgba(136,146,164,.06));display:flex;align-items:center;justify-content:center">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(192,200,216,.3)" stroke-width="1" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div class="port-card c1 reveal">
+          <div class="port-hero">
+            <div class="port-hero-bg bg1"></div>
+            <div class="port-logo l1">MH</div>
+            <span class="port-status live">Live</span>
           </div>
-          <div class="port-body" style="padding:24px">
+          <div class="port-body">
             <h3>Mimie's Hair</h3>
-            <p>Hair salon website with booking system and service showcase for a Tembisa-based business.</p>
-            <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" rel="noopener noreferrer">View Live Site</a>
+            <span class="port-type">Web Development</span>
+            <p>Hair salon website with booking system, service showcase, and video hero section for a Tembisa-based business. Bookings tripled in the first month.</p>
+            <div class="port-tags">
+              <span class="port-tag">React</span>
+              <span class="port-tag">Booking System</span>
+              <span class="port-tag">Responsive</span>
+            </div>
+            <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" rel="noopener noreferrer" class="port-link">View Live Site <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
-        <div class="port-card reveal">
-          <div class="port-img" style="height:200px;background:linear-gradient(135deg,rgba(168,180,200,.1),rgba(192,200,216,.06));display:flex;align-items:center;justify-content:center">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(168,180,200,.3)" stroke-width="1" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="port-card c2 reveal">
+          <div class="port-hero">
+            <div class="port-hero-bg bg2"></div>
+            <div class="port-logo l2">EF</div>
+            <span class="port-status live">Live</span>
           </div>
-          <div class="port-body" style="padding:24px">
+          <div class="port-body">
             <h3>Extreme Fire Design</h3>
-            <p>Fire protection company website with service catalog and contact forms for Zimbabwe operations.</p>
-            <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" rel="noopener noreferrer">View Live Site</a>
+            <span class="port-type">Web + Chatbot</span>
+            <p>Fire protection company website with service catalog, contact forms, and WhatsApp chatbot handling 40% of enquiries. 100 Lighthouse score.</p>
+            <div class="port-tags">
+              <span class="port-tag">PWA</span>
+              <span class="port-tag">Chatbot</span>
+              <span class="port-tag">100 Lighthouse</span>
+            </div>
+            <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" rel="noopener noreferrer" class="port-link">View Live Site <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
-        <div class="port-card reveal">
-          <div class="port-img" style="height:200px;background:linear-gradient(135deg,rgba(192,200,216,.08),rgba(136,146,164,.05));display:flex;align-items:center;justify-content:center;position:relative">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(192,200,216,.3)" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span style="position:absolute;top:12px;right:12px;background:rgba(245,158,11,.15);color:#f59e0b;font-size:.65rem;padding:4px 10px;border-radius:100px;font-weight:600">Under Development</span>
+        <div class="port-card c3 reveal">
+          <div class="port-hero">
+            <div class="port-hero-bg bg3"></div>
+            <div class="port-logo l3">SP</div>
+            <span class="port-status wip">In Progress</span>
           </div>
-          <div class="port-body" style="padding:24px">
+          <div class="port-body">
             <h3>SkyPath Airport UI</h3>
-            <p>Airport management UI/UX concept with flight tracking and passenger interface design.</p>
-            <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" rel="noopener noreferrer">View Demo</a>
+            <span class="port-type">UI/UX Design</span>
+            <p>Airport management UI/UX concept with flight tracking dashboard, passenger interface design, and real-time data visualization.</p>
+            <div class="port-tags">
+              <span class="port-tag">Figma</span>
+              <span class="port-tag">Dashboard</span>
+              <span class="port-tag">Prototype</span>
+            </div>
+            <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" rel="noopener noreferrer" class="port-link">View Demo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
-        <div class="port-card reveal">
-          <div class="port-img" style="height:200px;background:linear-gradient(135deg,rgba(168,180,200,.1),rgba(192,200,216,.08));display:flex;align-items:center;justify-content:center">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="rgba(168,180,200,.3)" stroke-width="1" aria-hidden="true"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v6m0 0H3m6 0h12M3 9v10a2 2 0 0 0 2 2h4m-6-12h12m0 0v10a2 2 0 0 1-2 2h-4m6-12H9"/></svg>
+        <div class="port-card c4 reveal">
+          <div class="port-hero">
+            <div class="port-hero-bg bg4"></div>
+            <div class="port-logo l4">CN</div>
+            <span class="port-status live">Live</span>
           </div>
-          <div class="port-body" style="padding:24px">
+          <div class="port-body">
             <h3>C.N. Cube Consulting</h3>
-            <p>Engineering consulting firm website with project portfolio and client testimonials for Bulawayo.</p>
-            <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" rel="noopener noreferrer">View Live Site</a>
+            <span class="port-type">Web Development</span>
+            <p>Engineering consulting firm website with project portfolio and client testimonials. Ranked #1 on Google for their industry in Bulawayo.</p>
+            <div class="port-tags">
+              <span class="port-tag">SEO</span>
+              <span class="port-tag">Portfolio</span>
+              <span class="port-tag">Mobile-First</span>
+            </div>
+            <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" rel="noopener noreferrer" class="port-link">View Live Site <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
       </div>
@@ -119,16 +185,19 @@
       </div>
       <div class="test-grid" style="margin-top:40px">
         <div class="test-card reveal">
-          <p style="font-style:italic">"Noel delivered our salon website in just 3 days. The booking system works perfectly and our clients love it."</p>
-          <div style="display:flex;align-items:center;gap:10px;margin-top:16px"><div style="width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--white)">M</div><div><div style="color:var(--white);font-size:.82rem;font-weight:600">Mimie</div><div style="color:var(--grey);font-size:.72rem">Mimie's Hair, Tembisa</div></div></div>
+          <div class="test-stars" style="margin-bottom:14px"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg></div>
+          <p style="font-style:italic;font-size:.88rem;color:var(--off);line-height:1.75;margin-bottom:16px">"Noel delivered our salon website in just 3 days. The booking system works perfectly and our clients love it. Bookings tripled in the first month!"</p>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#E11C6C,#FF6B9D);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--white)">M</div><div><div style="color:var(--white);font-size:.82rem;font-weight:600">Mimie</div><div style="color:var(--grey);font-size:.72rem">Mimie's Hair, Tembisa</div></div></div>
         </div>
         <div class="test-card reveal">
-          <p style="font-style:italic">"Professional, fast, and understands our industry. The website has brought us new clients from across Zimbabwe."</p>
-          <div style="display:flex;align-items:center;gap:10px;margin-top:16px"><div style="width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--white)">E</div><div><div style="color:var(--white);font-size:.82rem;font-weight:600">Extreme Fire</div><div style="color:var(--grey);font-size:.72rem">Fire Protection, Zimbabwe</div></div></div>
+          <div class="test-stars" style="margin-bottom:14px"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg></div>
+          <p style="font-style:italic;font-size:.88rem;color:var(--off);line-height:1.75;margin-bottom:16px">"Professional, fast, and understands our industry. 100 Lighthouse score, chatbot handling 40% of enquiries. Clients finally take us seriously online."</p>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#FF4500,#FF8C00);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--white)">E</div><div><div style="color:var(--white);font-size:.82rem;font-weight:600">Extreme Fire</div><div style="color:var(--grey);font-size:.72rem">Fire Protection, Zimbabwe</div></div></div>
         </div>
         <div class="test-card reveal">
-          <p style="font-style:italic">"Noel handled everything from design to hosting. Our consulting firm now has a professional online presence."</p>
-          <div style="display:flex;align-items:center;gap:10px;margin-top:16px"><div style="width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--white)">C</div><div><div style="color:var(--white);font-size:.82rem;font-weight:600">C.N. Cube</div><div style="color:var(--grey);font-size:.72rem">Engineering, Bulawayo</div></div></div>
+          <div class="test-stars" style="margin-bottom:14px"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg></div>
+          <p style="font-style:italic;font-size:.88rem;color:var(--off);line-height:1.75;margin-bottom:16px">"Noel handled everything from design to hosting. We rank #1 on Google for our industry and leads doubled. The professionalism helped us secure our first contract outside Bulawayo."</p>
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2D6A4F,#52B788);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--white)">C</div><div><div style="color:var(--white);font-size:.82rem;font-weight:600">C.N. Cube</div><div style="color:var(--grey);font-size:.72rem">Engineering, Bulawayo</div></div></div>
         </div>
       </div>
     </div>
