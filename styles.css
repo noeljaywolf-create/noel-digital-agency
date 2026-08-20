@@ -35,8 +35,8 @@ img{max-width:100%;display:block}
 .topbar-actions .contact-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
 .topbar-cta{background:var(--grad);color:var(--white)!important;padding:9px 22px;border-radius:8px;font-weight:600!important;font-size:.8rem!important;transition:box-shadow .25s!important}
 .topbar-cta:hover{box-shadow:0 4px 20px rgba(192,200,216,.35)}
-.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.menu-btn span{display:block;width:20px;height:2px;background:var(--off);margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--off);margin:4px 0;border-radius:2px;transition:transform .3s,opacity .3s}
 .menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .menu-btn.active span:nth-child(2){opacity:0;transform:translateX(-10px)}
 .menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
@@ -274,11 +274,13 @@ footer{border-top:1px solid rgba(255,255,255,.04);padding:56px 0 28px;background
   .marquee{display:none}
   body{padding-top:0}
   .topbar-strip{display:none}
-  .topbar-main{padding:0 20px;height:56px}
-  .topbar-nav{display:none;position:absolute;top:56px;left:0;right:0;background:rgba(0,19,39,.98);backdrop-filter:blur(20px);flex-direction:column;padding:16px;gap:4px;border-bottom:1px solid rgba(192,200,216,.08)}
+  .topbar-main{padding:0 16px;height:48px}
+  .topbar-nav{display:none;position:absolute;top:48px;left:0;right:0;background:rgba(10,15,26,.98);backdrop-filter:blur(20px);flex-direction:column;padding:12px 16px;gap:2px;border-bottom:1px solid rgba(192,200,216,.08)}
   .topbar-nav.active{display:flex}
-  .topbar-nav a{width:100%;text-align:left;padding:12px 16px}
+  .topbar-nav a{width:100%;text-align:left;padding:10px 12px;font-size:.78rem;border-radius:8px}
+  .topbar-nav a:hover{background:rgba(255,255,255,.04)}
   .topbar-actions .contact-link{display:none}
+  .topbar-cta{padding:7px 14px;font-size:.72rem!important}
   .menu-btn{display:block}
   .hero-text h1{font-size:2.2rem}
   .sec-title{font-size:1.8rem}
@@ -286,6 +288,40 @@ footer{border-top:1px solid rgba(255,255,255,.04);padding:56px 0 28px;background
   .f-row{grid-template-columns:1fr}
   .ft-bottom{flex-direction:column;gap:10px;text-align:center}
   .hero-stat-row{grid-template-columns:repeat(3,1fr)}
+  .hero{min-height:auto;padding:60px 0 40px}
+  .hero-inner{padding:40px 0}
+  .hero-stats{grid-template-columns:repeat(3,1fr);gap:10px}
+  .hero-stat{padding:12px 8px}
+  .hero-stat strong{font-size:1.3rem}
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns .btn{width:100%;justify-content:center;padding:12px 20px;font-size:.82rem}
+  .sec{padding:60px 0}
+  .sec-head{margin-bottom:40px}
+  .sec-title{font-size:1.6rem}
+  .sec-sub{font-size:.88rem}
+  .svc-img{height:140px}
+  .test-grid{gap:14px}
+  .test-card{padding:20px}
+  .cases-grid{gap:14px}
+  .case-card{padding:20px}
+  .case-metrics{grid-template-columns:repeat(3,1fr);gap:8px}
+  .case-metric{padding:10px 6px}
+  .case-metric strong{font-size:1.1rem}
+  .blog-grid{grid-template-columns:1fr}
+  .pricing-row{grid-template-columns:1fr;gap:6px}
+  .pricing-row label{margin-bottom:0}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .ft-brand{grid-column:1/-1}
+  .ft-bottom{padding-top:16px}
+  .contact-grid{grid-template-columns:1fr;gap:24px}
+  .c-info{padding:24px}
+  .c-form{padding:24px}
+  .about-layout{grid-template-columns:1fr;gap:32px}
+  .about-photo img{height:320px}
+  .wa-float{width:48px;height:48px;bottom:16px;right:16px}
+  .wa-float svg{width:24px;height:24px}
+  .btt{width:36px;height:36px;bottom:16px;right:72px}
+  .btt svg{width:14px;height:14px}
 }
 @media(max-width:480px){
   .hero-text h1{font-size:1.7rem}
