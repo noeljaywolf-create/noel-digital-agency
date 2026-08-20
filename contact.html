@@ -95,13 +95,13 @@
 
   <section class="sec">
     <div class="container">
-      <div class="sec-head reveal" style="text-align:center">
+      <div class="sec-head" style="text-align:center">
         <div class="sec-label">Get In Touch</div>
         <h2 class="sec-title">Contact Us</h2>
         <p class="sec-sub">Ready to start your project? Send us a message and we'll respond within 24 hours.</p>
       </div>
       <div class="contact-layout">
-        <div class="reveal">
+        <div>
           <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
             <input type="hidden" name="access_key" value="34b3656e-e345-4990-a304-a7d3a82d48c8">
             <input type="hidden" name="subject" value="New enquiry from Noel Digital Agency">
@@ -156,7 +156,7 @@
             </a>
           </div>
         </div>
-        <div class="reveal">
+        <div>
           <div class="contact-info-panel">
             <h3 style="font-family:var(--display);color:var(--white);font-size:1.1rem;margin-bottom:20px">Contact Information</h3>
             <div style="display:flex;flex-direction:column;gap:20px">
@@ -200,7 +200,7 @@
         </div>
       </div>
 
-      <div class="map-wrap reveal" style="margin-top:48px">
+      <div class="map-wrap" style="margin-top:48px">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122063.88910773914!2d31.00073585!3d-17.8251661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194cfda673c87367%3A0xa427c2d9feb9d04e!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2sza!4v1724000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Noel Digital Agency Location - Harare, Zimbabwe"></iframe>
         <div class="map-overlay"></div>
         <div class="map-badge">
@@ -322,9 +322,7 @@
     if(menuBtn)menuBtn.addEventListener('click',function(){menuBtn.classList.toggle('active');topnav.classList.toggle('active')});
     if(topnav)topnav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){menuBtn.classList.remove('active');topnav.classList.remove('active')})});
     window.addEventListener('scroll',function(){document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>50)});
-    var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
-    var btt=document.getElementById('btt');
+var btt=document.getElementById('btt');
     if(btt){window.addEventListener('scroll',function(){btt.classList.toggle('show',window.scrollY>400)});btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
     var tt=document.getElementById('themeToggle');
     if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}

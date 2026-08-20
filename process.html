@@ -25,8 +25,7 @@
     /* Blueprint Pipeline styles */
     .bp-grid{position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(192,200,216,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(192,200,216,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
     .bp-hero{padding:140px 0 80px;position:relative;overflow:hidden}
-    .bp-hero::before{content:'';position:absolute;top:0;left:50%;width:1px;height:100px;background:linear-gradient(180deg,var(--accent),transparent);transform:translateX(-50%);animation:bpLineGrow 1.5s ease-out forwards}
-    @keyframes bpLineGrow{from{height:0;opacity:0}to{height:100px;opacity:1}}
+    .bp-hero::before{content:'';position:absolute;top:0;left:50%;width:1px;height:100px;background:linear-gradient(180deg,var(--accent),transparent);transform:translateX(-50%)}
     .bp-hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(192,200,216,.08);border:1px solid rgba(192,200,216,.18);padding:8px 20px;border-radius:100px;font-size:.72rem;font-weight:700;color:var(--accent-l);text-transform:uppercase;letter-spacing:2px;margin-bottom:28px}
     .bp-hero-title{font-family:var(--display);font-size:3.2rem;font-weight:800;color:var(--white);line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
     .bp-hero-title em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -36,23 +35,19 @@
     .bp-stat strong{font-family:var(--display);font-size:1.6rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
     .bp-stat span{font-size:.7rem;color:var(--grey);text-transform:uppercase;letter-spacing:1px;font-weight:600}
     .bp-particles{position:absolute;inset:0;pointer-events:none;z-index:0}
-    .bp-particle{position:absolute;width:4px;height:4px;background:var(--accent);border-radius:50%;opacity:.3;animation:bpFloat 8s ease-in-out infinite}
-    @keyframes bpFloat{0%,100%{transform:translateY(0) scale(1);opacity:.2}50%{transform:translateY(-30px) scale(1.5);opacity:.5}}
+    .bp-particle{position:absolute;width:4px;height:4px;background:var(--accent);border-radius:50%;opacity:.3}
 
     /* Pipeline Track */
     .bp-pipeline{position:relative;padding:20px 0 60px}
     .bp-node{display:flex;gap:40px;align-items:flex-start;position:relative;margin-bottom:0}
     .bp-node-line{display:flex;flex-direction:column;align-items:center;min-width:60px;padding-top:24px}
     .bp-node-dot{width:20px;height:20px;border-radius:50%;background:var(--corp-navy);border:2px solid var(--accent);position:relative;z-index:2;transition:all .5s var(--ease);flex-shrink:0}
-    .bp-node.vis .bp-node-dot{background:var(--accent);box-shadow:0 0 20px rgba(192,200,216,.4)}
     .bp-node-connector{width:2px;flex:1;min-height:40px;background:linear-gradient(180deg,rgba(192,200,216,.2),rgba(192,200,216,.05));transition:all .6s var(--ease)}
-    .bp-node.vis .bp-node-connector{background:linear-gradient(180deg,var(--accent),rgba(192,200,216,.1))}
     .bp-node-connector--last{background:transparent!important}
 
     /* Node Card */
     .bp-node-card{flex:1;background:rgba(24,43,61,.4);border:1px solid rgba(255,255,255,.04);border-radius:20px;padding:32px;margin-bottom:24px;transition:all .4s var(--ease);position:relative;overflow:hidden}
     .bp-node-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
-    .bp-node.vis .bp-node-card::before{transform:scaleX(1)}
     .bp-node-card:hover{border-color:rgba(192,200,216,.12);transform:translateX(4px)}
 
     .bp-node-head{display:flex;gap:20px;align-items:flex-start;margin-bottom:20px}
@@ -76,7 +71,7 @@
     .bp-progress.hidden{opacity:0;pointer-events:none}
     .bp-progress-dot{width:10px;height:10px;border-radius:50%;border:2px solid rgba(192,200,216,.2);background:transparent;transition:all .3s;cursor:pointer}
     .bp-progress-dot.active{border-color:var(--accent);background:var(--accent);box-shadow:0 0 10px rgba(192,200,216,.4)}
-    .bp-progress-dot.visited{border-color:var(--accent);background:rgba(192,200,216,.3)}
+    
 
     @media(max-width:768px){
       .bp-hero-title{font-size:2rem}
@@ -132,23 +127,23 @@
 
   <!-- Floating Progress Bar -->
   <div class="bp-progress" id="bpProgress">
-    <div class="bp-progress-dot" data-step="0"></div>
-    <div class="bp-progress-dot" data-step="1"></div>
-    <div class="bp-progress-dot" data-step="2"></div>
-    <div class="bp-progress-dot" data-step="3"></div>
-    <div class="bp-progress-dot" data-step="4"></div>
-    <div class="bp-progress-dot" data-step="5"></div>
+    <div class="bp-progress-dot"></div>
+    <div class="bp-progress-dot"></div>
+    <div class="bp-progress-dot"></div>
+    <div class="bp-progress-dot"></div>
+    <div class="bp-progress-dot"></div>
+    <div class="bp-progress-dot"></div>
   </div>
 
   <!-- Hero Section -->
   <section class="bp-hero">
     <div class="bp-particles">
-      <div class="bp-particle" style="top:20%;left:10%;animation-delay:0s"></div>
-      <div class="bp-particle" style="top:60%;left:85%;animation-delay:2s"></div>
-      <div class="bp-particle" style="top:80%;left:30%;animation-delay:4s"></div>
-      <div class="bp-particle" style="top:35%;left:70%;animation-delay:1s"></div>
-      <div class="bp-particle" style="top:50%;left:50%;animation-delay:3s"></div>
-      <div class="bp-particle" style="top:15%;left:90%;animation-delay:5s"></div>
+      <div class="bp-particle" style="top:20%;left:10%"></div>
+      <div class="bp-particle" style="top:60%;left:85%"></div>
+      <div class="bp-particle" style="top:80%;left:30%"></div>
+      <div class="bp-particle" style="top:35%;left:70%"></div>
+      <div class="bp-particle" style="top:50%;left:50%"></div>
+      <div class="bp-particle" style="top:15%;left:90%"></div>
     </div>
     <div class="container" style="position:relative;z-index:1;text-align:center">
       <div class="bp-hero-tag">
@@ -183,7 +178,7 @@
     <div class="container">
 
       <!-- Step 01 - Discovery -->
-      <div class="bp-node" data-step="0">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -201,28 +196,28 @@
             <p>We immerse ourselves in your business, your users, and your market. This phase lays the foundation for every decision that follows &mdash; no assumptions, only evidence.</p>
             <div class="bp-node-details">
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128100;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <div>
                   <strong>Stakeholder Interviews</strong>
                   <p>One-on-one sessions to uncover goals, pain points, and vision.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128200;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
                 <div>
                   <strong>Competitor Analysis</strong>
                   <p>Mapping the landscape to find gaps and opportunities.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128101;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
                 <div>
                   <strong>User Persona Research</strong>
                   <p>Building data-driven profiles of your ideal customers.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128221;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
                 <div>
                   <strong>Project Brief</strong>
                   <p>A single source of truth that aligns everyone from day one.</p>
@@ -238,7 +233,7 @@
       </div>
 
       <!-- Step 02 - Strategy -->
-      <div class="bp-node" data-step="1">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -256,28 +251,28 @@
             <p>Before a single pixel is placed, we architect the solution. This is where we define the blueprint &mdash; structure, priorities, and the exact path to launch.</p>
             <div class="bp-node-details">
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128451;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
                 <div>
                   <strong>Information Architecture</strong>
                   <p>Structuring content and flows for intuitive navigation.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#127919;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
                 <div>
                   <strong>Feature Prioritization</strong>
                   <p>Focusing resources on what moves the needle most.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128197;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
                 <div>
                   <strong>Milestone Roadmap</strong>
                   <p>Clear checkpoints so you always know what's next.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#9881;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
                 <div>
                   <strong>Tech Stack Selection</strong>
                   <p>Choosing the right tools for performance and scalability.</p>
@@ -293,7 +288,7 @@
       </div>
 
       <!-- Step 03 - Design -->
-      <div class="bp-node" data-step="2">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -311,28 +306,28 @@
             <p>We bring strategy to life through rigorous visual design. Every component is crafted in Figma, iterated on, and approved by you before any development begins.</p>
             <div class="bp-node-details">
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128444;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
                 <div>
                   <strong>Wireframe Blueprints</strong>
                   <p>Low-fidelity layouts to validate structure and flow.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#127912;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
                 <div>
                   <strong>High-Fidelity Mockups</strong>
                   <p>Pixel-perfect visual designs ready for production.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128256;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
                 <div>
                   <strong>Interactive Prototype</strong>
                   <p>Click-through prototypes to experience the product early.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128260;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
                 <div>
                   <strong>Unlimited Revisions</strong>
                   <p>We refine until you're 100% satisfied with the design.</p>
@@ -348,7 +343,7 @@
       </div>
 
       <!-- Step 04 - Development -->
-      <div class="bp-node" data-step="3">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -366,28 +361,28 @@
             <p>Our engineers translate approved designs into production-grade code. Mobile-first, performance-optimized, and built to scale &mdash; with full transparency at every commit.</p>
             <div class="bp-node-details">
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128736;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
                 <div>
                   <strong>Clean Code Standards</strong>
                   <p>Readable, maintainable, and well-documented code.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128241;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
                 <div>
                   <strong>Mobile-First Build</strong>
                   <p>Every screen designed and tested for mobile before desktop.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128172;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
                 <div>
                   <strong>Daily Updates</strong>
                   <p>Regular progress reports so you're never left guessing.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#127760;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
                 <div>
                   <strong>Staging Environment</strong>
                   <p>A live preview URL to test and provide feedback in real time.</p>
@@ -403,7 +398,7 @@
       </div>
 
       <!-- Step 05 - Testing -->
-      <div class="bp-node" data-step="4">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -421,28 +416,28 @@
             <p>Rigorous QA across every device, browser, and scenario. We stress-test performance, validate security, and ensure accessibility before a single user sees your product.</p>
             <div class="bp-node-details">
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128424;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
                 <div>
                   <strong>Cross-Browser Testing</strong>
                   <p>Chrome, Firefox, Safari, Edge &mdash; flawless everywhere.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128241;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
                 <div>
                   <strong>Device Matrix</strong>
                   <p>Tested on phones, tablets, laptops, and ultra-wide displays.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#9889;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                 <div>
                   <strong>Performance Audit</strong>
                   <p>Core Web Vitals optimized for 90+ Lighthouse scores.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128274;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
                 <div>
                   <strong>Security &amp; SEO Check</strong>
                   <p>Vulnerability scans and on-page SEO validation.</p>
@@ -458,7 +453,7 @@
       </div>
 
       <!-- Step 06 - Launch + Support -->
-      <div class="bp-node" data-step="5">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector bp-node-connector--last"></div>
@@ -476,28 +471,28 @@
             <p>We don't just hand off and disappear. Controlled deployment, active monitoring, and a full month of free support ensure your product thrives from day one.</p>
             <div class="bp-node-details">
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128640;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
                 <div>
                   <strong>Controlled Deployment</strong>
                   <p>Staged rollouts to catch issues before your users do.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128065;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
                 <div>
                   <strong>72-Hour Monitoring</strong>
                   <p>Active surveillance of uptime, errors, and performance.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#129309;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
                 <div>
                   <strong>30-Day Free Support</strong>
                   <p>Bug fixes and minor adjustments at no extra cost.</p>
                 </div>
               </div>
               <div class="bp-detail">
-                <div class="bp-detail-ico">&#128200;</div>
+                <div class="bp-detail-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
                 <div>
                   <strong>Growth Roadmap</strong>
                   <p>A strategic plan for post-launch features and iterations.</p>
@@ -518,7 +513,7 @@
   <!-- CTA Section -->
   <section class="cta">
     <div class="container">
-      <div class="cta-box reveal">
+      <div class="cta-box">
         <h2>Start Your Pipeline</h2>
         <p>Ready to move from idea to execution? Let's kick off Phase One today.</p>
         <a href="contact.html" class="btn btn-p">Start Your Pipeline
@@ -580,38 +575,10 @@
     if(menuBtn)menuBtn.addEventListener('click',function(){menuBtn.classList.toggle('active');topnav.classList.toggle('active')});
     if(topnav)topnav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){menuBtn.classList.remove('active');topnav.classList.remove('active')})});
     window.addEventListener('scroll',function(){document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>50)});
-    var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
-    var btt=document.getElementById('btt');
+var btt=document.getElementById('btt');
     if(btt){window.addEventListener('scroll',function(){btt.classList.toggle('show',window.scrollY>400)});btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
     var tt=document.getElementById('themeToggle');
     if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}
-    /* Blueprint Pipeline animations */
-    (function(){
-      var nodes=document.querySelectorAll('.bp-node');
-      var dots=document.querySelectorAll('.bp-progress-dot');
-      var progress=document.getElementById('bpProgress');
-      var nodeObs=new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if(en.isIntersecting)en.target.classList.add('vis');
-        });
-      },{threshold:.2});
-      nodes.forEach(function(n){nodeObs.observe(n)});
-      var lastScroll=0;
-      window.addEventListener('scroll',function(){
-        var sy=window.scrollY;
-        if(sy<300){progress.classList.add('hidden')}else{progress.classList.remove('hidden')}
-        nodes.forEach(function(n,i){
-          var r=n.getBoundingClientRect();
-          if(r.top<window.innerHeight*.6&&r.bottom>0){dots.forEach(function(d,j){d.classList.toggle('active',j===i);if(j<i)d.classList.add('visited');else if(j>i)d.classList.remove('visited')})}
-        });
-        lastScroll=sy;
-      });
-      dots.forEach(function(d){d.addEventListener('click',function(){
-        var idx=parseInt(d.dataset.step);
-        if(nodes[idx]){nodes[idx].scrollIntoView({behavior:'smooth',block:'center'})}
-      })});
-    })();
   </script>
 
 </body>

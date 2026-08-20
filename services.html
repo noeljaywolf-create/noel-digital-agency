@@ -60,13 +60,13 @@
 
   <section class="sec">
     <div class="container">
-      <div class="sec-head reveal" style="text-align:center">
+      <div class="sec-head" style="text-align:center">
         <div class="sec-label">What We Do</div>
         <h2 class="sec-title">Our Services</h2>
         <p class="sec-sub">End-to-end digital solutions tailored to your business needs.</p>
       </div>
       <div class="svc-grid" style="margin-top:40px">
-        <div class="svc-card reveal">
+        <div class="svc-card">
           <div class="svc-ico">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
@@ -74,7 +74,7 @@
           <p>Custom websites built for speed, performance, and conversion. From business sites to complex web applications.</p>
           <div class="svc-price">From $40</div>
         </div>
-        <div class="svc-card reveal">
+        <div class="svc-card">
           <div class="svc-ico">
             <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
@@ -82,7 +82,7 @@
           <p>Native and cross-platform mobile apps for Android and iOS using Flutter and React Native.</p>
           <div class="svc-price">From $120</div>
         </div>
-        <div class="svc-card reveal">
+        <div class="svc-card">
           <div class="svc-ico">
             <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
           </div>
@@ -90,7 +90,7 @@
           <p>Beautiful, intuitive interfaces designed in Figma with user research and testing baked in.</p>
           <div class="svc-price">From $50</div>
         </div>
-        <div class="svc-card reveal">
+        <div class="svc-card">
           <div class="svc-ico">
             <svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
           </div>
@@ -98,7 +98,7 @@
           <p>SEO, social media marketing, Google Ads, and content strategy that drives real traffic and leads.</p>
           <div class="svc-price">From $40</div>
         </div>
-        <div class="svc-card reveal">
+        <div class="svc-card">
           <div class="svc-ico">
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
@@ -106,7 +106,7 @@
           <p>Website copy, blog articles, business plans, and technical documentation that converts.</p>
           <div class="svc-price">From $20</div>
         </div>
-        <div class="svc-card reveal">
+        <div class="svc-card">
           <div class="svc-ico">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
@@ -120,7 +120,7 @@
 
   <section class="cta">
     <div class="container">
-      <div class="cta-box reveal">
+      <div class="cta-box">
         <h2>Ready to Get Started?</h2>
         <p>Tell us about your project and we'll send you a custom quote within 24 hours.</p>
         <a href="contact.html" class="btn btn-p">Get a Quote
@@ -182,9 +182,7 @@
     if(menuBtn)menuBtn.addEventListener('click',function(){menuBtn.classList.toggle('active');topnav.classList.toggle('active')});
     if(topnav)topnav.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){menuBtn.classList.remove('active');topnav.classList.remove('active')})});
     window.addEventListener('scroll',function(){document.getElementById('topbar').classList.toggle('scrolled',window.scrollY>50)});
-    var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
-    var btt=document.getElementById('btt');
+var btt=document.getElementById('btt');
     if(btt){window.addEventListener('scroll',function(){btt.classList.toggle('show',window.scrollY>400)});btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
     var tt=document.getElementById('themeToggle');
     if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}
