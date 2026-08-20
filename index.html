@@ -49,7 +49,7 @@
     .hero{min-height:calc(100vh - 92px);display:flex;align-items:center;position:relative;overflow:hidden}
     .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
     .hero-video-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,21,37,.55) 0%,rgba(14,21,37,.4) 50%,rgba(14,21,37,.65) 100%)}
-    .hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:60px 0}
+    .hero-inner{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 0}
     .hero-text h1{font-family:var(--display);font-size:3.4rem;font-weight:800;line-height:1.08;color:var(--white);margin-bottom:20px;letter-spacing:-.02em}
     .sec{padding:80px 0}
   </style>
@@ -127,155 +127,32 @@
       <source src="hero-bg.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-orb hero-orb-3"></div>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
           <div class="tag">Digital Solutions Specialist</div>
-          <h1>Building Digital<br>Experiences That<br><em>Drive Results</em></h1>
-          <p>We help businesses grow with modern web development, app creation, UI/UX design, digital marketing, and professional writing &mdash; all under one roof.</p>
-          <div class="hero-btns">
+          <h1 style="max-width:700px;margin:0 auto 20px">Building Digital<br>Experiences That<br><em>Drive Results</em></h1>
+          <p style="margin:0 auto 36px;max-width:580px">We help businesses grow with modern web development, app creation, UI/UX design, digital marketing, and professional writing &mdash; all under one roof.</p>
+          <div class="hero-btns" style="justify-content:center">
             <a href="contact.html" class="btn btn-p">Start a Project
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <a href="#projects" class="btn btn-s">View Work</a>
           </div>
-            <div class="hero-stats">
+            <div class="hero-stats" style="max-width:480px;margin:28px auto 0">
               <div class="hero-stat">
-                <strong class="counter" data-target="50">0</strong>
+                <strong>50+</strong>
                 <span>Projects</span>
               </div>
               <div class="hero-stat">
-                <strong class="counter" data-target="30">0</strong>
+                <strong>30+</strong>
                 <span>Clients</span>
               </div>
               <div class="hero-stat">
-                <strong class="counter" data-target="5">0</strong>
+                <strong>5+</strong>
                 <span>Years</span>
               </div>
             </div>
-        </div>
-        <div class="hero-visual">
-          <div class="machine-wrap">
-            <!-- 3D Machine -->
-            <div class="machine">
-              <!-- Main Body -->
-              <div class="machine-body">
-                <div class="machine-face machine-front"></div>
-                <div class="machine-face machine-back"></div>
-                <div class="machine-face machine-left"></div>
-                <div class="machine-face machine-right"></div>
-                <div class="machine-face machine-top"></div>
-                <div class="machine-face machine-bottom"></div>
-                <!-- Screen -->
-                <div class="machine-screen">
-                  <div class="machine-code">
-                    <span class="mc-line"><i class="mc-kw">function</i> <i class="mc-fn">build</i>() {</span>
-                    <span class="mc-line">&nbsp;&nbsp;<i class="mc-kw">const</i> result = <i class="mc-fn">compile</i>();</span>
-                    <span class="mc-line">&nbsp;&nbsp;<i class="mc-kw">return</i> <i class="mc-str">deploy</i>(result);</span>
-                    <span class="mc-line">}</span>
-                    <span class="mc-line mc-cursor">█</span>
-                  </div>
-                  <div class="machine-screen-scan"></div>
-                </div>
-                <!-- Indicator Lights -->
-                <div class="machine-lights">
-                  <span class="ml ml-1"></span>
-                  <span class="ml ml-2"></span>
-                  <span class="ml ml-3"></span>
-                </div>
-              </div>
-              <!-- Gear Left -->
-              <div class="machine-gear mg-left">
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-center"></div>
-              </div>
-              <!-- Gear Right -->
-              <div class="machine-gear mg-right">
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-tooth"></div>
-                <div class="gear-center"></div>
-              </div>
-              <!-- Piston Left -->
-              <div class="machine-piston mp-left">
-                <div class="piston-rod"></div>
-                <div class="piston-head"></div>
-              </div>
-              <!-- Piston Right -->
-              <div class="machine-piston mp-right">
-                <div class="piston-rod"></div>
-                <div class="piston-head"></div>
-              </div>
-              <!-- Conveyor Belt -->
-              <div class="machine-conveyor">
-                <div class="conveyor-track">
-                  <div class="conveyor-item ci-1">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  </div>
-                  <div class="conveyor-item ci-2">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                  </div>
-                  <div class="conveyor-item ci-3">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                  </div>
-                  <div class="conveyor-item ci-4">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  </div>
-                  <div class="conveyor-item ci-5">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                  </div>
-                </div>
-                <div class="conveyor-wheel cw-1"></div>
-                <div class="conveyor-wheel cw-2"></div>
-              </div>
-              <!-- Smoke / Steam -->
-              <div class="machine-smoke">
-                <span class="smoke s1"></span>
-                <span class="smoke s2"></span>
-                <span class="smoke s3"></span>
-              </div>
-              <!-- Data Particles -->
-              <div class="machine-particles">
-                <span class="mparticle mp-1"></span>
-                <span class="mparticle mp-2"></span>
-                <span class="mparticle mp-3"></span>
-                <span class="mparticle mp-4"></span>
-                <span class="mparticle mp-5"></span>
-                <span class="mparticle mp-6"></span>
-                <span class="mparticle mp-7"></span>
-                <span class="mparticle mp-8"></span>
-              </div>
-              <!-- Output Chute -->
-              <div class="machine-chute">
-                <div class="chute-label">OUTPUT</div>
-                <div class="chute-items">
-                  <span class="chute-item"></span>
-                  <span class="chute-item"></span>
-                  <span class="chute-item"></span>
-                </div>
-              </div>
-            </div>
-            <!-- Status Labels -->
-            <div class="machine-status">
-              <span class="ms-dot"></span>
-              <span>Building your next project...</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -290,45 +167,33 @@
         <p class="sec-sub">From concept to launch, we handle every aspect of your digital presence.</p>
       </div>
       <div class="svc-grid">
-        <div class="svc-card tilt">
-          <div class="svc-ico">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
+        <div class="svc-card">
+          <img src="web developer.jfif" alt="Web Development" class="svc-img" loading="lazy" width="400" height="200">
           <h3>Web Development</h3>
           <p>Business websites, e-commerce, web applications, CMS solutions, and custom platforms built with modern technologies.</p>
         </div>
-        <div class="svc-card tilt">
-          <div class="svc-ico">
-            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
+        <div class="svc-card">
+          <img src="software systeme.jfif" alt="App Development" class="svc-img" loading="lazy" width="400" height="200">
           <h3>App Development</h3>
           <p>Native and cross-platform mobile applications for Android and iOS with seamless user experiences.</p>
         </div>
-        <div class="svc-card tilt">
-          <div class="svc-ico">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
+        <div class="svc-card">
+          <img src="security.jfif" alt="Digital Solutions" class="svc-img" loading="lazy" width="400" height="200">
           <h3>Digital Solutions</h3>
           <p>Business automation, system development, database solutions, dashboards, and custom software.</p>
         </div>
-        <div class="svc-card tilt">
-          <div class="svc-ico">
-            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
+        <div class="svc-card">
+          <img src="strategy.jfif" alt="Digital Marketing" class="svc-img" loading="lazy" width="400" height="200">
           <h3>Digital Marketing</h3>
           <p>SEO, social media marketing, Google ads, content marketing, and analytics-driven strategies.</p>
         </div>
-        <div class="svc-card tilt">
-          <div class="svc-ico">
-            <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-          </div>
+        <div class="svc-card">
+          <img src="ui ux.jfif" alt="UI/UX Design" class="svc-img" loading="lazy" width="400" height="200">
           <h3>UI/UX Design</h3>
           <p>User research, wireframes, and high-fidelity prototypes in Figma — designed for conversion and clarity.</p>
         </div>
-        <div class="svc-card tilt">
-          <div class="svc-ico">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
+        <div class="svc-card">
+          <img src="bussines.jfif" alt="Professional Writing" class="svc-img" loading="lazy" width="400" height="200">
           <h3>Professional Writing</h3>
           <p>Website copy, blog articles, business plans, and technical documentation that converts readers into clients.</p>
         </div>
