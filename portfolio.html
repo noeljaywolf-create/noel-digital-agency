@@ -21,43 +21,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
-  <link rel="stylesheet" href="styles.css?v=6">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
-  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}:root{--deep-navy:#0A0F1A;--dark-navy:#0E1525;--corp-navy:#131B2E;--slate:#1A2540;--grey:#6B7A94;--silver:#A8B4C8;--lsilver:#C8D0DE;--off:#E0E4EC;--white:#FFF;--accent:#C0C8D8;--accent-l:#D8DDE8;--grad:linear-gradient(135deg,#C0C8D8,#8892A4);--font:'Inter',system-ui,sans-serif;--display:'Space Grotesk',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}body{font-family:var(--font);background:var(--dark-navy);color:var(--off);line-height:1.65;overflow-x:hidden;padding-top:116px}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{max-width:1140px;margin:0 auto;padding:0 24px}.sec{padding:80px 0}
-    .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-    .port-card{background:var(--corp-navy);border:1px solid rgba(255,255,255,.04);border-radius:20px;overflow:hidden;transition:all .4s var(--ease);text-decoration:none;position:relative}
-    .port-card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(0,0,0,.35);border-color:rgba(192,200,216,.1)}
-    .port-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:2}
+  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
+  <style>
+    .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;position:relative;z-index:1}
+    .port-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;transition:border-color .4s,box-shadow .4s;text-decoration:none;position:relative;backdrop-filter:blur(20px)}
+    .port-card:hover{box-shadow:0 24px 48px rgba(0,0,0,.35),0 0 20px rgba(0,212,255,.08);border-color:rgba(0,212,255,.2)}
+    .port-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:2;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple))}
     .port-card:hover::before{transform:scaleX(1)}
-    .port-card.c1::before{background:linear-gradient(90deg,#E11C6C,#FF6B9D)}
-    .port-card.c2::before{background:linear-gradient(90deg,#FF4500,#FF8C00)}
-    .port-card.c3::before{background:linear-gradient(90deg,#00B4D8,#0077B6)}
-    .port-card.c4::before{background:linear-gradient(90deg,#2D6A4F,#52B788)}
     .port-hero{height:200px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
     .port-hero-bg{position:absolute;inset:0;opacity:.15;transition:opacity .4s}
     .port-card:hover .port-hero-bg{opacity:.25}
-    .port-hero-bg.bg1{background:linear-gradient(135deg,#1a0a1a,#3a0a2a,#E11C6C)}
+    .port-hero-bg.bg1{background:linear-gradient(135deg,#1a0a1a,#3a0a2a,var(--neon-purple))}
     .port-hero-bg.bg2{background:linear-gradient(135deg,#1a0a0a,#2a150a,#FF4500)}
-    .port-hero-bg.bg3{background:linear-gradient(135deg,#0a1520,#0a2030,#00B4D8)}
+    .port-hero-bg.bg3{background:linear-gradient(135deg,#0a1520,#0a2030,var(--neon-cyan))}
     .port-hero-bg.bg4{background:linear-gradient(135deg,#0a1a10,#102a1a,#2D6A4F)}
     .port-logo{position:relative;z-index:2;width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--white);transition:transform .4s var(--ease);border:2px solid rgba(255,255,255,.1)}
     .port-card:hover .port-logo{transform:scale(1.08)}
-    .port-logo.l1{background:linear-gradient(135deg,#E11C6C,#FF6B9D)}
+    .port-logo.l1{background:linear-gradient(135deg,var(--neon-purple),#FF6B9D)}
     .port-logo.l2{background:linear-gradient(135deg,#FF4500,#FF8C00)}
-    .port-logo.l3{background:linear-gradient(135deg,#00B4D8,#0077B6)}
+    .port-logo.l3{background:linear-gradient(135deg,var(--neon-cyan),#0077B6)}
     .port-logo.l4{background:linear-gradient(135deg,#2D6A4F,#52B788)}
     .port-status{position:absolute;top:14px;right:14px;z-index:3;padding:5px 12px;border-radius:100px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
     .port-status.live{background:rgba(34,197,94,.15);color:#22c55e;border:1px solid rgba(34,197,94,.2)}
     .port-status.wip{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.2)}
     .port-body{padding:24px 28px}
     .port-body h3{font-family:var(--display);font-size:1.1rem;color:var(--white);margin-bottom:4px;font-weight:700}
-    .port-body .port-type{font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px;display:block}
+    .port-body .port-type{font-size:.72rem;color:var(--neon-cyan);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:10px;display:block;font-family:var(--mono)}
     .port-body p{font-size:.82rem;color:var(--silver);line-height:1.65;margin-bottom:16px}
     .port-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-    .port-tag{background:rgba(192,200,216,.06);border:1px solid rgba(192,200,216,.08);padding:4px 10px;border-radius:100px;font-size:.68rem;color:var(--lsilver);font-weight:500}
-    .port-link{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--accent-l);font-weight:600;transition:all .2s}
-    .port-link:hover{color:var(--white);gap:10px}
-    .port-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .2s}
+    .port-tag{background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.1);padding:4px 10px;border-radius:100px;font-size:.68rem;color:var(--lsilver);font-weight:500;font-family:var(--mono)}
+    .port-link{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;color:var(--neon-cyan);font-weight:600;transition:all .2s}
+    .port-link:hover{color:var(--white);gap:10px;text-shadow:0 0 8px rgba(0,212,255,.4)}
+    .port-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
     @media(max-width:768px){.port-grid{grid-template-columns:1fr}.port-hero{height:160px}.port-logo{width:64px;height:64px;font-size:1.1rem}}</style>
 </head>
 <body>
