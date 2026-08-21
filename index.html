@@ -184,6 +184,7 @@
             <div class="case-metric"><strong>40%</strong><span>Bounce Reduction</span></div>
             <div class="case-metric"><strong>2s</strong><span>Load Time</span></div>
           </div>
+          <div class="case-extra">
           <div class="case-challenge">
             <h4>The Challenge</h4>
             <p>Mimie's Hair relied entirely on walk-ins and phone calls. No online booking, no gallery, no pricing visibility. Potential clients couldn't see their work or book appointments outside business hours.</p>
@@ -196,7 +197,9 @@
             <h4>The Results</h4>
             <p>Online bookings increased 3x within the first month. The bounce rate dropped 40% thanks to the immersive gallery and video hero. Page load time stays under 2 seconds on mobile â€” critical for Tembisa's mobile-first audience.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" rel="noopener noreferrer" class="case-link">View Live Project â†’</a>
+          </div>
+          <button type="button" class="case-readmore" onclick="toggleCase(this)">Read More</button>
+          <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" rel="noopener noreferrer" class="case-link" style="margin-left:10px">View Live Project â†’</a>
         </div>
 
         <!-- Extreme Fire Design -->
@@ -214,6 +217,7 @@
             <div class="case-metric"><strong>60%</strong><span>Contact Rate</span></div>
             <div class="case-metric"><strong>100</strong><span>Lighthouse Score</span></div>
           </div>
+          <div class="case-extra">
           <div class="case-challenge">
             <h4>The Challenge</h4>
             <p>The old site was outdated, hard to navigate, and didn't reflect the technical expertise of the company. Clients couldn't easily find service details, view past projects, or understand the fire protection standards the company follows (NFPA, EN 12845, ASIB).</p>
@@ -226,7 +230,9 @@
             <h4>The Results</h4>
             <p>Average session duration jumped to 5+ minutes (up from under 30 seconds on the old site). Contact form submissions increased 60%. The site achieved a perfect 100 Lighthouse score. The WhatsApp chatbot handles 40% of initial enquiries automatically.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" rel="noopener noreferrer" class="case-link">View Live Project â†’</a>
+          </div>
+          <button type="button" class="case-readmore" onclick="toggleCase(this)">Read More</button>
+          <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" rel="noopener noreferrer" class="case-link" style="margin-left:10px">View Live Project â†’</a>
         </div>
 
         <!-- SkyPath Airport UI -->
@@ -244,6 +250,7 @@
             <div class="case-metric"><strong>35%</strong><span>Faster Navigation</span></div>
             <div class="case-metric"><strong>12</strong><span>Screens Designed</span></div>
           </div>
+          <div class="case-extra">
           <div class="case-challenge">
             <h4>The Challenge</h4>
             <p>Passengers at Harare International Airport struggle with navigation â€” confusing signage, language barriers (5 official languages), and no real-time flight information at gate level. Gate changes cause missed flights and passenger frustration. No system exists to dynamically re-route passengers when disruptions occur.</p>
@@ -256,7 +263,9 @@
             <h4>The Results</h4>
             <p>Prototype testing showed 90% user satisfaction and 35% faster gate navigation. The dynamic gate-change system re-routes passengers instantly. Multi-language support covers 95% of the airport's passenger demographics. Currently in development â€” full deployment planned for 2027.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" rel="noopener noreferrer" class="case-link">View Demo â†’</a>
+          </div>
+          <button type="button" class="case-readmore" onclick="toggleCase(this)">Read More</button>
+          <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" rel="noopener noreferrer" class="case-link" style="margin-left:10px">View Demo â†’</a>
         </div>
 
         <!-- C.N. Cube Consulting -->
@@ -274,6 +283,7 @@
             <div class="case-metric"><strong>45%</strong><span>More Inquiries</span></div>
             <div class="case-metric"><strong>100</strong><span>Mobile Score</span></div>
           </div>
+          <div class="case-extra">
           <div class="case-challenge">
             <h4>The Challenge</h4>
             <p>C.N. Cube had no online presence. Potential clients â€” factories, commercial buildings, mining operations â€” couldn't find them online. All business came through referrals and word-of-mouth, limiting growth to Bulawayo alone.</p>
@@ -286,7 +296,9 @@
             <h4>The Results</h4>
             <p>Lead inquiries doubled within the first month. The site ranks #1 for "electrical consulting engineers Bulawayo" on Google. Mobile score hit 100 â€” critical since 80% of their traffic comes from mobile devices. The professional presence helped them secure their first contract outside Bulawayo.</p>
           </div>
-          <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" rel="noopener noreferrer" class="case-link">View Live Project â†’</a>
+          </div>
+          <button type="button" class="case-readmore" onclick="toggleCase(this)">Read More</button>
+          <a href="https://noeljaywolf-create.github.io/cn-cube-consulting/" target="_blank" rel="noopener noreferrer" class="case-link" style="margin-left:10px">View Live Project â†’</a>
         </div>
 
       </div>
@@ -679,11 +691,17 @@
 
     // Pricing Estimator
     var prices = {web:190,app:280,design:140,marketing:90,writing:50};
+    function updateSliderFill(slider) {
+      var pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+      slider.style.setProperty('--fill', pct + '%');
+    }
     document.querySelectorAll('.price-slider').forEach(function(slider) {
+      updateSliderFill(slider);
       slider.addEventListener('input', function() {
         var svc = this.dataset.service;
         var val = parseInt(this.value);
         var total = 0;
+        updateSliderFill(this);
         this.closest('.pricing-row').querySelector('.price-val').textContent = '$' + (val * prices[svc]);
         document.querySelectorAll('.price-slider').forEach(function(s) {
           total += parseInt(s.value) * prices[s.dataset.service];
@@ -692,6 +710,21 @@
         if (totalEl) totalEl.textContent = '$' + total;
       });
     });
+
+    // Case Study Read More
+    function toggleCase(btn) {
+      var card = btn.closest('.case-card');
+      var extra = card.querySelector('.case-extra');
+      if (!extra) return;
+      var isOpen = extra.classList.contains('open');
+      if (isOpen) {
+        extra.classList.remove('open');
+        btn.textContent = 'Read More';
+      } else {
+        extra.classList.add('open');
+        btn.textContent = 'Show Less';
+      }
+    }
 
 </script>
 
