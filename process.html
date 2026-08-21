@@ -19,24 +19,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Our Process","description":"6-step Blueprint Pipeline for digital solutions"}
 
     // Progress bar
-    var bpNodes = document.querySelectorAll('.bp-node');
-    var bpDots = document.querySelectorAll('.bp-pb-dot');
-    if (bpNodes.length && bpDots.length) {
-      window.addEventListener('scroll', function() {
-        var scrollPos = window.scrollY + window.innerHeight / 3;
-        bpNodes.forEach(function(node, i) {
-          var top = node.offsetTop;
-          var bot = top + node.offsetHeight;
-          if (scrollPos >= top && scrollPos < bot) {
-            bpDots.forEach(function(d) { d.classList.remove('active') });
-            if (bpDots[i]) bpDots[i].classList.add('active');
-          }
-        });
-      });
-    }
-
-    function scrollToStep(i) {
-      if (bpNodes[i]) bpNodes[i].scrollIntoView({behavior:'smooth',block:'center'});
+    );
     }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -590,28 +573,7 @@
   <button class="btt" id="btt" aria-label="Back to top"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Our 6-Step Blueprint Pipeline","description":"A precision-engineered workflow that turns raw ideas into world-class digital products.","step":[{"@type":"HowToStep","position":1,"name":"Discovery","text":"Deep-dive into your business, users, and market through stakeholder interviews, competitor analysis, and user persona research."},{"@type":"HowToStep","position":2,"name":"Strategy","text":"Architecture before decoration. Information architecture, feature prioritization, milestone roadmap, and tech stack selection."},{"@type":"HowToStep","position":3,"name":"Design","text":"Figma-first, pixel-perfect. Wireframe blueprints, high-fidelity mockups, interactive prototypes with unlimited revisions."},{"@type":"HowToStep","position":4,"name":"Development","text":"Clean code, zero shortcuts. Mobile-first build, daily updates, staging environment for real-time feedback."},{"@type":"HowToStep","position":5,"name":"Testing","text":"Cross-browser testing, device matrix, performance audit for 90+ Lighthouse, security and SEO validation."},{"@type":"HowToStep","position":6,"name":"Launch + Support","text":"Controlled deployment, 72-hour monitoring, 30-day free support, and a strategic growth roadmap."}],"totalTime":"P2W"}
-
-    // Progress bar
-    var bpNodes = document.querySelectorAll('.bp-node');
-    var bpDots = document.querySelectorAll('.bp-pb-dot');
-    if (bpNodes.length && bpDots.length) {
-      window.addEventListener('scroll', function() {
-        var scrollPos = window.scrollY + window.innerHeight / 3;
-        bpNodes.forEach(function(node, i) {
-          var top = node.offsetTop;
-          var bot = top + node.offsetHeight;
-          if (scrollPos >= top && scrollPos < bot) {
-            bpDots.forEach(function(d) { d.classList.remove('active') });
-            if (bpDots[i]) bpDots[i].classList.add('active');
-          }
-        });
-      });
-    }
-
-    function scrollToStep(i) {
-      if (bpNodes[i]) bpNodes[i].scrollIntoView({behavior:'smooth',block:'center'});
-    }
-  </script>
+</script>
   <script>
     var menuBtn=document.getElementById('menuBtn'),topnav=document.getElementById('topnav');
     if(menuBtn)menuBtn.addEventListener('click',function(){menuBtn.classList.toggle('active');topnav.classList.toggle('active')});
