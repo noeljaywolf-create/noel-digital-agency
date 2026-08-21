@@ -21,9 +21,64 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
 
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Noel Digital Agency","url":"https://noeljaywolf-create.github.io/noel-digital-agency/","logo":"https://noeljaywolf-create.github.io/noel-digital-agency/loggo.png","description":"Professional web development, app creation, UI/UX design, digital marketing, and professional writing services.","founder":{"@type":"Person","name":"Noel Chakwenya","jobTitle":"Digital Solutions Specialist","nationality":{"@type":"Country","name":"Zimbabwe"}},"address":{"@type":"PostalAddress","addressCountry":"ZW"},"contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"chakwenyanoel0@gmail.com","telephone":"+263-77-127-3169"},"sameAs":["https://www.linkedin.com/in/noel-chakwenya","https://github.com/noeljaywolf-create"],"areaServed":{"@type":"Country","name":"Zimbabwe"},"serviceType":["Web Development","App Development","UI/UX Design","Digital Marketing","Professional Writing"]}
+  
+    // Enhanced Quote Builder
+    var svcNames = {web:'Web Development',app:'App Development',design:'UI/UX Design',marketing:'Digital Marketing',writing:'Professional Writing'};
+    var svcTimelines = {web:[1,2],app:[2,4],design:[1,3],marketing:[1,2],writing:[1,1]};
+    function updateQuote() {
+      var items = document.getElementById('quoteBriefItems');
+      var timeEl = document.getElementById('quoteTimeEst');
+      if (!items || !timeEl) return;
+      var tags = [];
+      var maxWeeks = 1;
+      document.querySelectorAll('.price-slider').forEach(function(s) {
+        var val = parseInt(s.value);
+        if (val > 0) {
+          tags.push('<span class="quote-brief-tag">' + svcNames[s.dataset.service] + ' (' + val + (val === 1 ? ' page' : ' pages') + ')</span>');
+          if (svcTimelines[s.dataset.service][1] > maxWeeks) maxWeeks = svcTimelines[s.dataset.service][1];
+        }
+      });
+      items.innerHTML = tags.length ? tags.join('') : '<span class="quote-brief-tag">No services selected</span>';
+      timeEl.textContent = maxWeeks <= 1 ? '1 week' : maxWeeks <= 2 ? '1-2 weeks' : maxWeeks <= 3 ? '2-3 weeks' : maxWeeks <= 4 ? '3-4 weeks' : '4-6 weeks';
+    }
+
+    // PDF Download
+    function downloadPDF() {
+      var total = document.querySelector('.price-total').textContent;
+      var items = [];
+      document.querySelectorAll('.price-slider').forEach(function(s) {
+        var val = parseInt(s.value);
+        if (val > 0) items.push(svcNames[s.dataset.service] + ': $' + (val * prices[s.dataset.service]));
+      });
+      var timeEst = document.getElementById('quoteTimeEst').textContent;
+      var lines = [
+        'NOEL DIGITAL agency - PROJECT QUOTE',
+        '====================================',
+        '',
+        'Date: ' + new Date().toLocaleDateString(),
+        '',
+        'PROJECT BREAKDOWN:',
+        '-------------------'
+      ];
+      items.forEach(function(item) { lines.push('  ' + item) });
+      lines.push('');
+      lines.push('ESTIMATED TOTAL: ' + total);
+      lines.push('ESTIMATED TIMELINE: ' + timeEst);
+      lines.push('');
+      lines.push('This is an estimate. Contact us for an exact quote.');
+      lines.push('Email: chakwenyanoel0@gmail.com');
+      lines.push('WhatsApp: +263771273169');
+      lines.push('Web: noeljaywolf-create.github.io/noel-digital-agency/');
+      var blob = new Blob([lines.join('\n')], {type:'text/plain'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'Noel-Digital-Agency-Quote.txt';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
   <style>
@@ -306,7 +361,7 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="sec" id="testimonials" style="background:rgba(10,15,26,.5)">
+  <section class="sec sec-fullbleed" id="testimonials" style="background:rgba(10,15,26,.5)">
     <div class="container">
       <div class="sec-head" style="text-align:center">
         <div class="sec-label">Client Voices</div>
@@ -336,6 +391,77 @@
           <div class="test-author">
             <div class="test-avatar a3">C</div>
             <div><div class="test-name">C.N. Cube Consulting</div><div class="test-role">Engineering Consultants â€” Bulawayo, Zimbabwe</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Client Dashboard Preview -->
+  <section class="sec" id="dashboard" style="background:rgba(10,15,26,.5)">
+    <div class="container">
+      <div class="sec-head" style="text-align:center">
+        <div class="sec-label">Transparency</div>
+        <h2 class="sec-title">Your Project, Your Dashboard</h2>
+        <p class="sec-sub">Every client gets real-time visibility into their project. Here's what you'll see.</p>
+      </div>
+      <div class="dash-preview" style="max-width:900px;margin:0 auto">
+        <div class="dash-topbar">
+          <div class="dash-dots"><span></span><span></span><span></span></div>
+          <div class="dash-topbar-title">Noel Digital Agency - Client Portal</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-sidebar">
+            <div class="dash-nav-item active">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              Dashboard
+            </div>
+            <div class="dash-nav-item">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Brief
+            </div>
+            <div class="dash-nav-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Timeline
+            </div>
+            <div class="dash-nav-item">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Messages
+            </div>
+          </div>
+          <div class="dash-content">
+            <h4>Project Overview</h4>
+            <div class="dash-stats">
+              <div class="dash-stat-card"><div class="label">Progress</div><div class="value">68%</div></div>
+              <div class="dash-stat-card"><div class="label">Revisions</div><div class="value">1/3</div></div>
+              <div class="dash-stat-card"><div class="label">Days Left</div><div class="value">4</div></div>
+            </div>
+            <div class="dash-milestone">
+              <span class="dash-ms-dot done"></span>
+              <span class="dash-ms-text">Discovery & Strategy</span>
+              <span class="dash-ms-status done">Complete</span>
+            </div>
+            <div class="dash-milestone">
+              <span class="dash-ms-dot done"></span>
+              <span class="dash-ms-text">Design Mockups</span>
+              <span class="dash-ms-status done">Complete</span>
+            </div>
+            <div class="dash-milestone">
+              <span class="dash-ms-dot active"></span>
+              <span class="dash-ms-text">Development</span>
+              <span class="dash-ms-status active">In Progress</span>
+            </div>
+            <div class="dash-milestone">
+              <span class="dash-ms-dot pending"></span>
+              <span class="dash-ms-text">Testing & QA</span>
+              <span class="dash-ms-status pending">Pending</span>
+            </div>
+            <div class="dash-milestone">
+              <span class="dash-ms-dot pending"></span>
+              <span class="dash-ms-text">Launch & Support</span>
+              <span class="dash-ms-status pending">Pending</span>
+            </div>
           </div>
         </div>
       </div>
@@ -604,6 +730,8 @@
   </div>
 
   <!-- JavaScript -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a website cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the scope. A simple business site starts from $40, while complex e-commerce or web apps range from $500-$5,000."}},{"@type":"Question","name":"How long does it take to build a website?","acceptedAnswer":{"@type":"Answer","text":"Most projects are completed within 1-4 weeks. Simple sites take about a week, while larger applications can take 3-6 weeks."}},{"@type":"Question","name":"Do you offer revisions?","acceptedAnswer":{"@type":"Answer","text":"Yes! Every project includes up to 3 rounds of revisions. We want you to be 100% satisfied with the final result."}},{"@type":"Question","name":"Can you build mobile apps too?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. We build both native and cross-platform mobile apps for Android and iOS using Flutter and React Native."}},{"@type":"Question","name":"Do you work with clients outside Zimbabwe?","acceptedAnswer":{"@type":"Answer","text":"Yes! While we're based in Zimbabwe, we work with clients worldwide. Communication happens via email, WhatsApp, or video calls."}},{"@type":"Question","name":"What's your payment structure?","acceptedAnswer":{"@type":"Answer","text":"We typically require 50% upfront to begin work, with the remaining 50% due upon completion. For larger projects, we can arrange milestone-based payments."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Web Development","provider":{"@type":"Organization","name":"Noel Digital Agency","url":"https://noeljaywolf-create.github.io/noel-digital-agency/"},"areaServed":{"@type":"Country","name":"Zimbabwe"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Digital Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Web Development","description":"Business websites, e-commerce, web applications, and custom platforms"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"App Development","description":"Native and cross-platform mobile applications for Android and iOS"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"UI/UX Design","description":"User research, wireframes, and high-fidelity prototypes in Figma"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Digital Marketing","description":"SEO, social media marketing, Google ads, and content marketing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Professional Writing","description":"Website copy, blog articles, business plans, and technical documentation"}}]}}</script>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const topnav = document.getElementById('topnav');
@@ -701,7 +829,7 @@
         var svc = this.dataset.service;
         var val = parseInt(this.value);
         var total = 0;
-        updateSliderFill(this);
+        updateSliderFill(this);updateQuote();
         this.closest('.pricing-row').querySelector('.price-val').textContent = '$' + (val * prices[svc]);
         document.querySelectorAll('.price-slider').forEach(function(s) {
           total += parseInt(s.value) * prices[s.dataset.service];
@@ -710,6 +838,7 @@
         if (totalEl) totalEl.textContent = '$' + total;
       });
     });
+    updateQuote();
 
     // Case Study Read More
     function toggleCase(btn) {
@@ -726,7 +855,62 @@
       }
     }
 
-</script>
+
+    // Enhanced Quote Builder
+    var svcNames = {web:'Web Development',app:'App Development',design:'UI/UX Design',marketing:'Digital Marketing',writing:'Professional Writing'};
+    var svcTimelines = {web:[1,2],app:[2,4],design:[1,3],marketing:[1,2],writing:[1,1]};
+    function updateQuote() {
+      var items = document.getElementById('quoteBriefItems');
+      var timeEl = document.getElementById('quoteTimeEst');
+      if (!items || !timeEl) return;
+      var tags = [];
+      var maxWeeks = 1;
+      document.querySelectorAll('.price-slider').forEach(function(s) {
+        var val = parseInt(s.value);
+        if (val > 0) {
+          tags.push('<span class="quote-brief-tag">' + svcNames[s.dataset.service] + ' (' + val + (val === 1 ? ' page' : ' pages') + ')</span>');
+          if (svcTimelines[s.dataset.service][1] > maxWeeks) maxWeeks = svcTimelines[s.dataset.service][1];
+        }
+      });
+      items.innerHTML = tags.length ? tags.join('') : '<span class="quote-brief-tag">No services selected</span>';
+      timeEl.textContent = maxWeeks <= 1 ? '1 week' : maxWeeks <= 2 ? '1-2 weeks' : maxWeeks <= 3 ? '2-3 weeks' : maxWeeks <= 4 ? '3-4 weeks' : '4-6 weeks';
+    }
+
+    // PDF Download
+    function downloadPDF() {
+      var total = document.querySelector('.price-total').textContent;
+      var items = [];
+      document.querySelectorAll('.price-slider').forEach(function(s) {
+        var val = parseInt(s.value);
+        if (val > 0) items.push(svcNames[s.dataset.service] + ': $' + (val * prices[s.dataset.service]));
+      });
+      var timeEst = document.getElementById('quoteTimeEst').textContent;
+      var lines = [
+        'NOEL DIGITAL agency - PROJECT QUOTE',
+        '====================================',
+        '',
+        'Date: ' + new Date().toLocaleDateString(),
+        '',
+        'PROJECT BREAKDOWN:',
+        '-------------------'
+      ];
+      items.forEach(function(item) { lines.push('  ' + item) });
+      lines.push('');
+      lines.push('ESTIMATED TOTAL: ' + total);
+      lines.push('ESTIMATED TIMELINE: ' + timeEst);
+      lines.push('');
+      lines.push('This is an estimate. Contact us for an exact quote.');
+      lines.push('Email: chakwenyanoel0@gmail.com');
+      lines.push('WhatsApp: +263771273169');
+      lines.push('Web: noeljaywolf-create.github.io/noel-digital-agency/');
+      var blob = new Blob([lines.join('\n')], {type:'text/plain'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'Noel-Digital-Agency-Quote.txt';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+  </script>
 
 
 </body>
