@@ -17,16 +17,6 @@
   <meta property="og:image" content="loggo.png">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Our Process","description":"6-step Blueprint Pipeline for digital solutions"}
-    // Interactive Timeline
-    function toggleBpNode(btn) {
-      var card = btn.closest('.bp-node');
-      card.classList.toggle('expanded');
-      btn.textContent = card.classList.contains('expanded') ? 'Hide Details' : 'View Details';
-      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      svg.innerHTML = '<polyline points="6 9 12 15 18 9"/>';
-      btn.appendChild(svg);
-    }
 
     // Progress bar
     var bpNodes = document.querySelectorAll('.bp-node');
@@ -199,7 +189,7 @@
     <div class="container">
 
       <!-- Step 01 - Discovery -->
-      <div class="bp-node expanded">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -245,7 +235,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="bp-toggle" onclick="toggleBpNode(this)">View Details <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="bp-node-duration">
+            <div class="bp-node-duration">
               <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               Duration: 1 &ndash; 2 days
             </div>
@@ -254,7 +244,7 @@
       </div>
 
       <!-- Step 02 - Strategy -->
-      <div class="bp-node expanded">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -300,7 +290,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="bp-toggle" onclick="toggleBpNode(this)">View Details <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="bp-node-duration">
+            <div class="bp-node-duration">
               <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               Duration: 2 &ndash; 3 days
             </div>
@@ -309,7 +299,7 @@
       </div>
 
       <!-- Step 03 - Design -->
-      <div class="bp-node expanded">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -355,7 +345,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="bp-toggle" onclick="toggleBpNode(this)">View Details <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="bp-node-duration">
+            <div class="bp-node-duration">
               <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               Duration: 3 &ndash; 5 days
             </div>
@@ -364,7 +354,7 @@
       </div>
 
       <!-- Step 04 - Development -->
-      <div class="bp-node expanded">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -410,7 +400,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="bp-toggle" onclick="toggleBpNode(this)">View Details <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="bp-node-duration">
+            <div class="bp-node-duration">
               <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               Duration: 5 &ndash; 8 days
             </div>
@@ -419,7 +409,7 @@
       </div>
 
       <!-- Step 05 - Testing -->
-      <div class="bp-node expanded">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector"></div>
@@ -465,7 +455,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="bp-toggle" onclick="toggleBpNode(this)">View Details <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="bp-node-duration">
+            <div class="bp-node-duration">
               <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               Duration: 1 &ndash; 2 days
             </div>
@@ -474,7 +464,7 @@
       </div>
 
       <!-- Step 06 - Launch + Support -->
-      <div class="bp-node expanded">
+      <div class="bp-node">
         <div class="bp-node-line">
           <div class="bp-node-dot"></div>
           <div class="bp-node-connector bp-node-connector--last"></div>
@@ -520,7 +510,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="bp-toggle" onclick="toggleBpNode(this)">View Details <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="bp-node-duration">
+            <div class="bp-node-duration">
               <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               Duration: Deployment day + 30 days
             </div>
@@ -600,16 +590,6 @@
   <button class="btt" id="btt" aria-label="Back to top"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Our 6-Step Blueprint Pipeline","description":"A precision-engineered workflow that turns raw ideas into world-class digital products.","step":[{"@type":"HowToStep","position":1,"name":"Discovery","text":"Deep-dive into your business, users, and market through stakeholder interviews, competitor analysis, and user persona research."},{"@type":"HowToStep","position":2,"name":"Strategy","text":"Architecture before decoration. Information architecture, feature prioritization, milestone roadmap, and tech stack selection."},{"@type":"HowToStep","position":3,"name":"Design","text":"Figma-first, pixel-perfect. Wireframe blueprints, high-fidelity mockups, interactive prototypes with unlimited revisions."},{"@type":"HowToStep","position":4,"name":"Development","text":"Clean code, zero shortcuts. Mobile-first build, daily updates, staging environment for real-time feedback."},{"@type":"HowToStep","position":5,"name":"Testing","text":"Cross-browser testing, device matrix, performance audit for 90+ Lighthouse, security and SEO validation."},{"@type":"HowToStep","position":6,"name":"Launch + Support","text":"Controlled deployment, 72-hour monitoring, 30-day free support, and a strategic growth roadmap."}],"totalTime":"P2W"}
-    // Interactive Timeline
-    function toggleBpNode(btn) {
-      var card = btn.closest('.bp-node');
-      card.classList.toggle('expanded');
-      btn.textContent = card.classList.contains('expanded') ? 'Hide Details' : 'View Details';
-      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      svg.innerHTML = '<polyline points="6 9 12 15 18 9"/>';
-      btn.appendChild(svg);
-    }
 
     // Progress bar
     var bpNodes = document.querySelectorAll('.bp-node');
@@ -642,16 +622,6 @@ var btt=document.getElementById('btt');
     var tt=document.getElementById('themeToggle');
     if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}
   
-    // Interactive Timeline
-    function toggleBpNode(btn) {
-      var card = btn.closest('.bp-node');
-      card.classList.toggle('expanded');
-      btn.textContent = card.classList.contains('expanded') ? 'Hide Details' : 'View Details';
-      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      svg.innerHTML = '<polyline points="6 9 12 15 18 9"/>';
-      btn.appendChild(svg);
-    }
 
     // Progress bar
     var bpNodes = document.querySelectorAll('.bp-node');
