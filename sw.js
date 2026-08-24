@@ -12,7 +12,6 @@ const ASSETS = [
   './styles.css?v=9',
   './manifest.json',
   './loggo.png',
-  './hero-bg.mp4',
   './search-index.json',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap'
 ];
