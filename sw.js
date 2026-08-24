@@ -9,6 +9,7 @@ const ASSETS = [
   './contact.html',
   './roi-calculator.html',
   './404.html',
+  './blog.html',
   './styles.css?v=10',
   './manifest.json',
   './favicon.ico',

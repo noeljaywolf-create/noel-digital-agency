@@ -1,4 +1,4 @@
-{
+﻿{
   "pages": [
     {"title": "Home", "url": "index.html", "section": "home", "keywords": "home landing hero services pricing testimonials blog faq"},
     {"title": "About", "url": "about.html", "section": "about", "keywords": "about team story mission values tech stack currently building"},
@@ -16,9 +16,9 @@
     {"title": "Digital Solutions", "url": "services.html#solutions", "description": "Business automation, system development, databases, dashboards", "price": "Custom"}
   ],
   "blog": [
-    {"title": "7 Web Development Trends Reshaping Zimbabwe in 2026", "url": "index.html#blog", "date": "2026-08-15", "category": "Web Development", "readTime": 8},
-    {"title": "Digital Marketing on a Budget: A 2026 Guide for African SMEs", "url": "index.html#blog", "date": "2026-08-08", "category": "Digital Marketing", "readTime": 7},
-    {"title": "Why 71% of Mobile Apps Still Fail at UX (And How to Fix It)", "url": "index.html#blog", "date": "2026-07-29", "category": "UI/UX Design", "readTime": 6}
+    {"title": "7 Web Development Trends Reshaping Zimbabwe in 2026", "url": "blog.html", "date": "2026-08-15", "category": "Web Development", "readTime": 8},
+    {"title": "Digital Marketing on a Budget: A 2026 Guide for African SMEs", "url": "blog.html", "date": "2026-08-08", "category": "Digital Marketing", "readTime": 7},
+    {"title": "Why 71% of Mobile Apps Still Fail at UX (And How to Fix It)", "url": "blog.html", "date": "2026-07-29", "category": "UI/UX Design", "readTime": 6}
   ],
   "caseStudies": [
     {"title": "Mimie's Hair — E-Commerce & Booking Platform", "url": "https://noeljaywolf-create.github.io/mimies-hair/", "category": "E-Commerce · Beauty", "metrics": "3x Bookings, 40% Bounce Reduction"},
@@ -30,7 +30,7 @@
     {"title": "Get a Quote", "url": "contact.html", "keywords": "quote estimate pricing contact"},
     {"title": "Start a Project", "url": "contact.html", "keywords": "project start new build"},
     {"title": "View Live Projects", "url": "portfolio.html", "keywords": "portfolio projects case studies live"},
-    {"title": "Read Blog", "url": "index.html#blog", "keywords": "blog articles insights news"},
+    {"title": "Read Blog", "url": "blog.html", "keywords": "blog articles insights news"},
     {"title": "WhatsApp Chat", "url": "https://wa.me/263771273169", "keywords": "whatsapp chat message"},
     {"title": "Email Us", "url": "mailto:chakwenyanoel0@gmail.com", "keywords": "email contact mail"},
     {"title": "ROI Calculator", "url": "roi-calculator.html", "keywords": "roi calculator return investment revenue"},
