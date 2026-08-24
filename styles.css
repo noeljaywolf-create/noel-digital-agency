@@ -859,3 +859,6 @@ body.light .contact-info-panel{background:rgba(255,255,255,.7);border-color:rgba
 .blog-copy:hover{border-color:rgba(0,212,255,.3);color:var(--neon-cyan);background:rgba(0,212,255,.06)}
 .blog-copy.copied{border-color:var(--neon-cyan);color:var(--neon-cyan);background:rgba(0,212,255,.1)}
 .blog-readmore-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+/* Perf: disable expensive backdrop-filter blur on content cards (keep frosted effect on nav/modals only).
+   Cards retain their semi-transparent --glass-bg + border for the glass look without the layout cost. */
+.svc-card,.svc-card::before,.case-card,.blog-card,.port-card,.port-card .port-overlay,.port-logo-ico svg,.w-card,.why-card,.test-card,.faq-item,.c-info,.building-card,.tech-col,.pricing-sliders,.contact-info-row,.dash-topbar,.compare-table thead th,.hero-card-top,.hero-stat,.hero-stat strong,.about-photo-badge,.proc-card,.c-form,.cta-box,.marquee-track{backdrop-filter:none;-webkit-backdrop-filter:none}
