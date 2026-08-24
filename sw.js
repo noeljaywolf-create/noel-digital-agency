@@ -12,6 +12,7 @@ const ASSETS = [
   './styles.css?v=10',
   './manifest.json',
   './favicon.ico',
+  './feed.xml',
   './loggo.png',
   './search-index.json',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap'
@@ -48,8 +49,12 @@ self.addEventListener('fetch', function(event) {
 
   var url = new URL(event.request.url);
 
-  // For navigation requests (HTML pages), use network-first with cache fallback
-  if (event.request.mode === 'navigate') {
+  // For navigation requests (HTML pages), use network-first with cache fallback.
+  // Gate on text/html accept so non-HTML resources (e.g. feed.xml) are NOT
+  // routed here and never fall back to 404.html.
+  if (event.request.mode === 'navigate' &&
+      event.request.headers.get('accept') &&
+      event.request.headers.get('accept').indexOf('text/html') !== -1) {
     event.respondWith(
       fetch(event.request).catch(function() {
         return caches.match(event.request).then(function(resp) {
