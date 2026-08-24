@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = 'noel-digital-v1';
+﻿const CACHE_NAME = 'noel-digital-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -43,18 +43,20 @@ self.addEventListener('activate', function(event) {
   );
   self.clients.claim();
 });
-
 self.addEventListener('fetch', function(event) {
   if (event.request.method !== 'GET') return;
 
   var url = new URL(event.request.url);
 
-  // For navigation requests (HTML pages), use network-first with cache fallback.
-  // Gate on text/html accept so non-HTML resources (e.g. feed.xml) are NOT
-  // routed here and never fall back to 404.html.
-  if (event.request.mode === 'navigate' &&
-      event.request.headers.get('accept') &&
-      event.request.headers.get('accept').indexOf('text/html') !== -1) {
+  // Only treat real HTML page navigations (site root or *.html) via this handler.
+  // We key off the URL (not the Accept header) because browsers send
+  // "text/html" in Accept for ALL document navigations, including feed.xml.
+  // This prevents non-HTML resources (e.g. feed.xml) from ever falling back
+  // to 404.html.
+  var isHtmlPage = event.request.mode === 'navigate' &&
+    (url.pathname === '/' || /\.html?$/i.test(url.pathname));
+
+  if (isHtmlPage) {
     event.respondWith(
       fetch(event.request).catch(function() {
         return caches.match(event.request).then(function(resp) {
@@ -65,7 +67,8 @@ self.addEventListener('fetch', function(event) {
     return;
   }
 
-  // For other requests, use cache-first with network fallback
+  // For other requests (feed.xml, css, js, images, fonts), use cache-first
+  // with network fallback. These are never served as HTML.
   event.respondWith(
     caches.match(event.request).then(function(cached) {
       if (cached) return cached;
