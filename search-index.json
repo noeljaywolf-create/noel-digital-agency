@@ -1,0 +1,39 @@
+{
+  "pages": [
+    {"title": "Home", "url": "index.html", "section": "home", "keywords": "home landing hero services pricing testimonials blog faq"},
+    {"title": "About", "url": "about.html", "section": "about", "keywords": "about team story mission values tech stack currently building"},
+    {"title": "Services", "url": "services.html", "section": "services", "keywords": "services web development app development ui ux design digital marketing professional writing digital solutions brand identity"},
+    {"title": "Projects", "url": "portfolio.html", "section": "portfolio", "keywords": "projects portfolio case studies mimies hair extreme fire design skypath airport ui cn cube consulting"},
+    {"title": "Process", "url": "process.html", "section": "process", "keywords": "process blueprint pipeline discovery strategy design development testing launch support"},
+    {"title": "Contact", "url": "contact.html", "section": "contact", "keywords": "contact quote form email whatsapp phone map location"}
+  ],
+  "services": [
+    {"title": "Web Development", "url": "services.html#web", "description": "Business websites, e-commerce, web applications, CMS solutions", "price": "$190/page"},
+    {"title": "App Development", "url": "services.html#app", "description": "Native and cross-platform mobile apps for Android and iOS", "price": "$280/page"},
+    {"title": "UI/UX Design", "url": "services.html#design", "description": "User research, wireframes, high-fidelity prototypes in Figma", "price": "$140/page"},
+    {"title": "Digital Marketing", "url": "services.html#marketing", "description": "SEO, social media, Google ads, content marketing, analytics", "price": "$90/page"},
+    {"title": "Professional Writing", "url": "services.html#writing", "description": "Website copy, blog articles, business plans, technical docs", "price": "$50/page"},
+    {"title": "Digital Solutions", "url": "services.html#solutions", "description": "Business automation, system development, databases, dashboards", "price": "Custom"}
+  ],
+  "blog": [
+    {"title": "7 Web Development Trends Reshaping Zimbabwe in 2026", "url": "index.html#blog", "date": "2026-08-15", "category": "Web Development", "readTime": 8},
+    {"title": "Digital Marketing on a Budget: A 2026 Guide for African SMEs", "url": "index.html#blog", "date": "2026-08-08", "category": "Digital Marketing", "readTime": 7},
+    {"title": "Why 71% of Mobile Apps Still Fail at UX (And How to Fix It)", "url": "index.html#blog", "date": "2026-07-29", "category": "UI/UX Design", "readTime": 6}
+  ],
+  "caseStudies": [
+    {"title": "Mimie's Hair — E-Commerce & Booking Platform", "url": "https://noeljaywolf-create.github.io/mimies-hair/", "category": "E-Commerce · Beauty", "metrics": "3x Bookings, 40% Bounce Reduction"},
+    {"title": "Extreme Fire Design — Corporate Engineering Site", "url": "https://noeljaywolf-create.github.io/extremefire-design/", "category": "Corporate · Fire Protection", "metrics": "5min Avg Session, 60% Contact Rate"},
+    {"title": "SkyPath Airport UI — Wayfinding Kiosk System", "url": "https://noeljaywolf-create.github.io/airport-ui/", "category": "Under Development · UI/UX", "metrics": "90% Satisfaction, 35% Faster Navigation"},
+    {"title": "C.N. Cube Consulting — Engineering Consultants Site", "url": "https://noeljaywolf-create.github.io/cn-cube-consulting/", "category": "Engineering · Consulting", "metrics": "2x Leads, 100 Mobile Score"}
+  ],
+  "actions": [
+    {"title": "Get a Quote", "url": "contact.html", "keywords": "quote estimate pricing contact"},
+    {"title": "Start a Project", "url": "contact.html", "keywords": "project start new build"},
+    {"title": "View Live Projects", "url": "portfolio.html", "keywords": "portfolio projects case studies live"},
+    {"title": "Read Blog", "url": "index.html#blog", "keywords": "blog articles insights news"},
+    {"title": "WhatsApp Chat", "url": "https://wa.me/263771273169", "keywords": "whatsapp chat message"},
+    {"title": "Email Us", "url": "mailto:chakwenyanoel0@gmail.com", "keywords": "email contact mail"},
+    {"title": "ROI Calculator", "url": "roi-calculator.html", "keywords": "roi calculator return investment revenue"},
+    {"title": "Pricing Estimator", "url": "index.html#pricing-estimator", "keywords": "pricing estimator cost calculator"}
+  ]
+}

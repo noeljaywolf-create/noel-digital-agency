@@ -9,7 +9,7 @@
   <meta name="description" content="Our portfolio of web development, app development, and design projects." />
   <link rel="icon" href="loggo.png" type="image/png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230A0F1A'/><text x='32' y='44' font-family='Arial,sans-serif' font-weight='bold' font-size='36' fill='%23C0C8D8' text-anchor='middle'>N</text></svg>" type="image/svg+xml">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">`r`n  <link rel="alternate" type="application/rss+xml" title="Noel Digital Agency Blog" href="feed.xml">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Projects - Noel Digital Agency","description":"Our portfolio of web development, app development, and design projects.","url":"portfolio.html","isPartOf":{"@type":"WebSite","name":"Noel Digital Agency","url":"index.html"}}</script>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Noel Digital Agency">
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
   <style>
     .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;position:relative;z-index:1}
@@ -97,8 +97,14 @@
         <h2 class="sec-title">Featured Projects</h2>
         <p class="sec-sub">Real projects, real results. Here is what we have built.</p>
       </div>
+      <div class="port-filter" role="group" aria-label="Filter projects">
+        <button type="button" class="pf-btn active" data-filter="all" onclick="filterProjects('all')">All</button>
+        <button type="button" class="pf-btn" data-filter="web" onclick="filterProjects('web')">Web Development</button>
+        <button type="button" class="pf-btn" data-filter="design" onclick="filterProjects('design')">UI/UX Design</button>
+        <button type="button" class="pf-btn" data-filter="chatbot" onclick="filterProjects('chatbot')">Chatbot</button>
+      </div>
       <div class="port-grid" style="margin-top:40px">
-        <div class="port-card c1">
+        <div class="port-card c1" data-category="web">
           <div class="port-hero">
             <div class="port-hero-bg bg1"></div>
             <div class="port-logo l1">MH</div>
@@ -116,7 +122,7 @@
             <a href="https://noeljaywolf-create.github.io/mimies-hair/" target="_blank" rel="noopener noreferrer" class="port-link">View Live Site <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
-        <div class="port-card c2">
+        <div class="port-card c2" data-category="chatbot">
           <div class="port-hero">
             <div class="port-hero-bg bg2"></div>
             <div class="port-logo l2">EF</div>
@@ -134,7 +140,7 @@
             <a href="https://noeljaywolf-create.github.io/extremefire-design/" target="_blank" rel="noopener noreferrer" class="port-link">View Live Site <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
-        <div class="port-card c3">
+        <div class="port-card c3" data-category="design">
           <div class="port-hero">
             <div class="port-hero-bg bg3"></div>
             <div class="port-logo l3">SP</div>
@@ -152,7 +158,7 @@
             <a href="https://noeljaywolf-create.github.io/airport-ui/" target="_blank" rel="noopener noreferrer" class="port-link">View Demo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
-        <div class="port-card c4">
+        <div class="port-card c4" data-category="web">
           <div class="port-hero">
             <div class="port-hero-bg bg4"></div>
             <div class="port-logo l4">CN</div>
@@ -231,11 +237,11 @@
           <a href="mailto:chakwenyanoel0@gmail.com">chakwenyanoel0@gmail.com</a>
           <a href="https://github.com/noeljaywolf-create" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://wa.me/263771273169" target="_blank" rel="noopener noreferrer">WhatsApp: 077 127 3169</a>
-          <a href="https://www.linkedin.com/in/noel-chakwenya" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/noel-chakwenya" target="_blank" rel="noopener noreferrer">LinkedIn</a>`r`n          <a href="feed.xml">RSS Feed</a>
         </div>
       </div>
       <div class="ft-bottom">
-        <p>&copy; 2026 Noel Digital Agency. All Rights Reserved.</p>
+        <p><span id="copyright-year">&copy; 2024&#8211;2026</span> Noel Digital Agency. All Rights Reserved.</p>
         <p>Crafted with precision</p>
       </div>
     </div>
@@ -258,5 +264,208 @@ var btt=document.getElementById('btt');
     if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}
   </script>
 
+<!-- Command Palette - include at end of <body> on all pages -->
+<div id="cmd-palette" class="cmd-palette" role="dialog" aria-modal="true" aria-label="Command Palette">
+  <div class="cmd-backdrop"></div>
+  <div class="cmd-window">
+    <div class="cmd-header">
+      <svg class="cmd-icon" viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg>
+      <input type="text" id="cmd-input" class="cmd-input" placeholder="Search pages, services, projects..." autocomplete="off" spellcheck="false" autocapitalize="off">
+      <kbd class="cmd-shortcut">⌘K</kbd>
+    </div>
+    <div class="cmd-hint">Type to search · ↑↓ navigate · ⏎ open · Esc close</div>
+    <div id="cmd-results" class="cmd-results"></div>
+    <div id="cmd-empty" class="cmd-empty hidden">No results for "<span></span>"</div>
+    <div class="cmd-footer">
+      <span class="cmd-footer-left">Noel Digital Agency</span>
+      <span class="cmd-footer-right">v2026.1</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var indexData = null;
+  var currentHighlight = -1;
+  var results = [];
+
+  // Load search index
+  fetch('search-index.json?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(data) { indexData = data; })
+    .catch(function() { indexData = {pages:[],services:[],blog:[],caseStudies:[],actions:[]}; });
+
+  var palette = document.getElementById('cmd-palette');
+  var input = document.getElementById('cmd-input');
+  var resultsEl = document.getElementById('cmd-results');
+  var emptyEl = document.getElementById('cmd-empty');
+
+  function openPalette() {
+    if (!palette) return;
+    palette.classList.add('open');
+    input.focus();
+    input.value = '';
+    renderResults([]);
+    emptyEl.classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePalette() {
+    if (!palette) return;
+    palette.classList.remove('open');
+    document.body.style.overflow = '';
+    currentHighlight = -1;
+  }
+
+  function search(query) {
+    if (!indexData || !query.trim()) return [];
+    var q = query.toLowerCase().trim();
+    var items = [];
+
+    function addItems(arr, type, icon) {
+      arr.forEach(function(item) {
+        var hay = (item.title + ' ' + (item.description||'') + ' ' + (item.keywords||'') + ' ' + (item.category||'') + ' ' + (item.metrics||'')).toLowerCase();
+        if (hay.indexOf(q) !== -1) {
+          items.push({
+            type: type,
+            title: item.title,
+            url: item.url,
+            description: item.description || item.category || item.metrics || '',
+            icon: icon,
+            external: item.url.indexOf('http') === 0 || item.url.indexOf('mailto:') === 0 || item.url.indexOf('wa.me') === 0
+          });
+        }
+      });
+    }
+
+    addItems(indexData.pages, 'page', '<svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>');
+    addItems(indexData.services, 'service', '<svg viewBox="0 0 24 24" width="16" height="16"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>');
+    addItems(indexData.blog, 'blog', '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>');
+    addItems(indexData.caseStudies, 'case', '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>');
+    addItems(indexData.actions, 'action', '<svg viewBox="0 0 24 24" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>');
+
+    return items.slice(0, 10);
+  }
+
+  function highlight(text, query) {
+    if (!query) return text;
+    var parts = text.split(new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'));
+    return parts.map(function(p, i) {
+      return i % 2 === 1 ? '<mark>' + p + '</mark>' : p;
+    }).join('');
+  }
+
+  function renderResults(items) {
+    results = items;
+    currentHighlight = -1;
+    if (items.length === 0) {
+      resultsEl.innerHTML = '';
+      emptyEl.classList.remove('hidden');
+      emptyEl.querySelector('span').textContent = input.value;
+      return;
+    }
+    emptyEl.classList.add('hidden');
+    resultsEl.innerHTML = items.map(function(item, i) {
+      return '<a href="' + item.url + '" class="cmd-item" data-index="' + i + '"' + (item.external ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' +
+        '<span class="cmd-item-icon">' + item.icon + '</span>' +
+        '<div class="cmd-item-content">' +
+        '<span class="cmd-item-title">' + highlight(item.title, input.value) + '</span>' +
+        (item.description ? '<span class="cmd-item-desc">' + highlight(item.description, input.value) + '</span>' : '') +
+        '</div>' +
+        '<span class="cmd-item-type">' + item.type + '</span>' +
+      '</a>';
+    }).join('');
+  }
+
+  function navigate(dir) {
+    var items = resultsEl.querySelectorAll('.cmd-item');
+    if (!items.length) return;
+    currentHighlight = (currentHighlight + dir + items.length) % items.length;
+    items.forEach(function(el, i) {
+      el.classList.toggle('highlighted', i === currentHighlight);
+    });
+    if (items[currentHighlight]) {
+      items[currentHighlight].scrollIntoView({block: 'nearest'});
+    }
+  }
+
+  function selectHighlighted() {
+    var items = resultsEl.querySelectorAll('.cmd-item');
+    if (currentHighlight >= 0 && items[currentHighlight]) {
+      items[currentHighlight].click();
+    }
+  }
+
+  // Keyboard handlers
+  document.addEventListener('keydown', function(e) {
+    // Open with ⌘K or Ctrl+K
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (palette.classList.contains('open')) {
+        closePalette();
+      } else {
+        openPalette();
+      }
+    }
+    // Escape closes
+    if (e.key === 'Escape' && palette.classList.contains('open')) {
+      closePalette();
+    }
+    // Navigation inside palette
+    if (palette.classList.contains('open')) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); navigate(1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); navigate(-1); }
+      else if (e.key === 'Enter') { e.preventDefault(); selectHighlighted(); }
+    }
+  });
+
+  // Click backdrop to close
+  palette.querySelector('.cmd-backdrop').addEventListener('click', closePalette);
+
+  // Input handler
+  input.addEventListener('input', function() {
+    renderResults(search(this.value));
+  });
+
+  // Click result
+  resultsEl.addEventListener('click', function(e) {
+    var link = e.target.closest('.cmd-item');
+    if (link) {
+      closePalette();
+    }
+  });
+
+  // Expose for debugging
+  window.CmdPalette = { open: openPalette, close: closePalette };
+})();
+</script>
+  
+    // Portfolio filter
+    function filterProjects(cat) {
+      document.querySelectorAll('.pf-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.filter === cat); });
+      document.querySelectorAll('.port-card').forEach(function(card){
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+<script>
+    (function(){
+      var el=document.getElementById("copyright-year");
+      if(el){var y=new Date().getFullYear();var s=2024;el.innerHTML="&copy; "+(y>s?s+"&#8211;"+y:y)+" Noel Digital Agency";}
+    })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').catch(function(err){console.log('SW registration failed:', err)});
+      });
+    }
+  </script>
 </body>
 </html>
