@@ -174,7 +174,7 @@
 var btt=document.getElementById('btt');
     if(btt){window.addEventListener('scroll',function(){btt.classList.toggle('show',window.scrollY>400)});btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
     var tt=document.getElementById('themeToggle');
-    if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}
+    if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark')})}
   </script>
 
 <!-- Command Palette - include at end of <body> on all pages -->

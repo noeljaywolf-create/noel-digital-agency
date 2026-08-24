@@ -879,10 +879,6 @@
         if (totalEl) totalEl.textContent = '$' + total;
       });
     });
-    updateQuote();    // Initialize currency display on load
-    document.querySelectorAll('.price-slider').forEach(function(s){ s.dispatchEvent(new Event('input')); });
-
-
     // Currency conversion
     var rates = {USD:1, ZWL:350, ZAR:18.5};
     var symbols = {USD:'$', ZWL:'Z$', ZAR:'R'};
@@ -896,9 +892,7 @@
       currentCurrency = curr;
       document.querySelectorAll('.curr-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.curr === curr); });
       document.querySelectorAll('.price-slider').forEach(function(s){ s.dispatchEvent(new Event('input')); });
-      updateQuote();    // Initialize currency display on load
-    document.querySelectorAll('.price-slider').forEach(function(s){ s.dispatchEvent(new Event('input')); });
-
+      updateQuote();
     }
     // Copy article link
     function copyArticleLink(btn) {
@@ -1073,7 +1067,9 @@
       a.click();
       URL.revokeObjectURL(a.href);
     }
-  </script>
+      updateQuote();
+    document.querySelectorAll('.price-slider').forEach(function(s){ s.dispatchEvent(new Event('input')); });
+</script>
 
 
 <!-- Command Palette - include at end of <body> on all pages -->

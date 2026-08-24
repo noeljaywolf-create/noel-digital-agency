@@ -40,13 +40,13 @@
     .contact-form textarea{resize:vertical;min-height:120px}
     .contact-form .form-submit{border:none;cursor:pointer;padding:14px 28px;font-size:.9rem;width:100%;border-radius:12px;box-shadow:0 0 20px rgba(0,212,255,.25)}
     .form-success{display:none;text-align:center;padding:40px 20px}
-    .map-wrap{margin-top:48px;border-radius:20px;overflow:hidden;border:1px solid var(--glass-border);position:relative;z-index:1}
-    .map-wrap iframe{width:100%;height:350px;border:0;display:block}
-    .map-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,var(--dark-navy));pointer-events:none;z-index:1}
-    .map-badge{position:absolute;bottom:20px;left:20px;z-index:2;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px;padding:12px 18px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.4);backdrop-filter:blur(20px)}
-    .map-badge-ico{width:36px;height:36px;border-radius:10px;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.1);display:flex;align-items:center;justify-content:center}
-    .map-badge-text strong{display:block;font-size:.78rem;color:var(--white)}
-    .map-badge-text span{font-size:.68rem;color:var(--grey)}
+    
+    
+    
+    
+    
+    
+    
     .contact-quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
     .contact-quick{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 12px;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:14px;text-decoration:none;transition:border-color .3s,box-shadow .3s,transform .3s;backdrop-filter:blur(20px)}
     .contact-quick:hover{border-color:rgba(0,212,255,.15);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2),0 0 8px rgba(0,212,255,.06)}
@@ -58,7 +58,7 @@
     .contact-quick-ico.em-ico{background:rgba(0,212,255,.06);color:var(--neon-cyan)}
     .contact-quick strong{font-size:.75rem;color:var(--white)}
     .contact-quick span{font-size:.65rem;color:var(--grey)}
-    @media(max-width:768px){.contact-layout{grid-template-columns:1fr}.contact-quick-actions{grid-template-columns:repeat(3,1fr)}.map-wrap iframe{height:250px}}</style>
+    @media(max-width:768px){.contact-layout{grid-template-columns:1fr}.contact-quick-actions{grid-template-columns:repeat(3,1fr)}}</style>
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -94,146 +94,9 @@
   </header>
   <div class="marquee"><div class="marquee-track"><span>Web Development</span><i>&#9670;</i><span>App Development</span><i>&#9670;</i><span>UI/UX Design</span><i>&#9670;</i><span>Digital Marketing</span><i>&#9670;</i><span>Professional Writing</span><i>&#9670;</i><span>Digital Solutions</span><i>&#9670;</i><span>Web Development</span><i>&#9670;</i><span>App Development</span><i>&#9670;</i><span>UI/UX Design</span><i>&#9670;</i><span>Digital Marketing</span><i>&#9670;</i><span>Professional Writing</span><i>&#9670;</i><span>Digital Solutions</span><i>&#9670;</i></div></div>
 
-  <div class="world-map-wrap" aria-label="Global client locations">
-  <svg class="world-map" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="map-title map-desc">
-    <title id="map-title">Global Client Locations</title>
-    <desc id="map-desc">World map showing Noel Digital Agency client locations: Harare, Bulawayo (Zimbabwe); Tembisa, Johannesburg (South Africa); with global reach</desc>
-    
-    <!-- Ocean background -->
-    <rect width="800" height="400" fill="var(--corp-navy)" />
-    
-    <!-- Graticule lines -->
-    <g stroke="rgba(0,212,255,.03)" stroke-width="0.5" fill="none">
-      <line x1="0" y1="0" x2="800" y2="0" />
-      <line x1="0" y1="50" x2="800" y2="50" />
-      <line x1="0" y1="100" x2="800" y2="100" />
-      <line x1="0" y1="150" x2="800" y2="150" />
-      <line x1="0" y1="200" x2="800" y2="200" />
-      <line x1="0" y1="250" x2="800" y2="250" />
-      <line x1="0" y1="300" x2="800" y2="300" />
-      <line x1="0" y1="350" x2="800" y2="350" />
-      <line x1="0" y1="400" x2="800" y2="400" />
-      <line x1="0" y1="0" x2="0" y2="400" />
-      <line x1="80" y1="0" x2="80" y2="400" />
-      <line x1="160" y1="0" x2="160" y2="400" />
-      <line x1="240" y1="0" x2="240" y2="400" />
-      <line x1="320" y1="0" x2="320" y2="400" />
-      <line x1="400" y1="0" x2="400" y2="400" />
-      <line x1="480" y1="0" x2="480" y2="400" />
-      <line x1="560" y1="0" x2="560" y2="400" />
-      <line x1="640" y1="0" x2="640" y2="400" />
-      <line x1="720" y1="0" x2="720" y2="400" />
-      <line x1="800" y1="0" x2="800" y2="400" />
-    </g>
+  
 
-    <!-- Continents (simplified paths) -->
-    <g fill="rgba(192,200,216,.04)" stroke="rgba(0,212,255,.08)" stroke-width="0.5">
-      <!-- Africa -->
-      <path d="M380,160 Q400,140 420,150 Q440,170 420,200 Q390,220 360,210 Q340,190 360,170 Q370,150 380,160 Z" />
-      <!-- South America -->
-      <path d="M180,180 Q200,170 210,190 Q220,220 200,250 Q170,260 150,240 Q140,210 160,190 Q175,175 180,180 Z" />
-      <!-- North America -->
-      <path d="M100,40 Q140,30 180,50 Q200,80 180,120 Q150,140 120,130 Q80,110 70,80 Q60,60 80,50 Q90,35 100,40 Z" />
-      <!-- Europe -->
-      <path d="M360,40 Q400,30 440,45 Q450,70 430,90 Q410,100 390,90 Q370,80 360,40 Z" />
-      <!-- Asia -->
-      <path d="M440,30 Q520,20 600,40 Q650,80 630,120 Q580,140 520,130 Q480,110 450,90 Q430,60 440,30 Z" />
-      <!-- Australia -->
-      <path d="M600,260 Q640,250 670,270 Q680,300 660,320 Q630,330 600,310 Q580,290 590,270 Q595,260 600,260 Z" />
-      <!-- Antarctica -->
-      <path d="M100,380 Q200,370 300,380 Q400,370 500,380 Q600,370 700,380 Q750,390 700,400 Q500,410 300,400 Q150,390 100,380 Z" fill="rgba(0,212,255,.05)" />
-    </g>
 
-    <!-- Client Pins -->
-    <g class="map-pins">
-      <!-- Harare, Zimbabwe -->
-      <g class="map-pin" data-tooltip="Harare, Zimbabwe&#10;Mimie's Hair | Extreme Fire Design | C.N. Cube Consulting&#10;4 Active Projects" style="transform-origin: 395px 195px;">
-        <circle class="pin-pulse" cx="395" cy="195" r="16" fill="var(--neon-cyan)" opacity="0.3" />
-        <circle class="pin-ring" cx="395" cy="195" r="10" fill="none" stroke="var(--neon-cyan)" stroke-width="2" />
-        <circle class="pin-core" cx="395" cy="195" r="5" fill="var(--neon-cyan)" />
-        <text x="395" y="180" class="pin-label" text-anchor="middle">Harare</text>
-      </g>
-
-      <!-- Bulawayo, Zimbabwe -->
-      <g class="map-pin" data-tooltip="Bulawayo, Zimbabwe&#10;C.N. Cube Consulting Engineers&#10;Engineering Consulting" style="transform-origin: 375px 215px;">
-        <circle class="pin-pulse" cx="375" cy="215" r="16" fill="var(--neon-purple)" opacity="0.3" />
-        <circle class="pin-ring" cx="375" cy="215" r="10" fill="none" stroke="var(--neon-purple)" stroke-width="2" />
-        <circle class="pin-core" cx="375" cy="215" r="5" fill="var(--neon-purple)" />
-        <text x="375" y="200" class="pin-label" text-anchor="middle">Bulawayo</text>
-      </g>
-
-      <!-- Tembisa/Johannesburg, South Africa -->
-      <g class="map-pin" data-tooltip="Tembisa, Johannesburg (South Africa)&#10;Mimie's Hair Salon&#10;E-Commerce & Booking Platform" style="transform-origin: 380px 245px;">
-        <circle class="pin-pulse" cx="380" cy="245" r="16" fill="var(--neon-cyan)" opacity="0.3" />
-        <circle class="pin-ring" cx="380" cy="245" r="10" fill="none" stroke="var(--neon-cyan)" stroke-width="2" />
-        <circle class="pin-core" cx="380" cy="245" r="5" fill="var(--neon-cyan)" />
-        <text x="380" y="230" class="pin-label" text-anchor="middle">Johannesburg</text>
-      </g>
-
-      <!-- Global reach indicator (dotted lines from Harare) -->
-      <g class="map-reach" stroke="rgba(0,212,255,.15)" stroke-width="1" stroke-dasharray="4,4" fill="none">
-        <path d="M395,195 Q200,150 120,80" />
-        <path d="M395,195 Q300,100 450,50" />
-        <path d="M395,195 Q500,180 620,140" />
-        <path d="M395,195 Q550,280 650,320" />
-      </g>
-
-      <!-- Global reach dots -->
-      <g fill="var(--neon-cyan)" opacity="0.4">
-        <circle cx="120" cy="80" r="3" />
-        <circle cx="450" cy="50" r="3" />
-        <circle cx="620" cy="140" r="3" />
-        <circle cx="650" cy="320" r="3" />
-      </g>
-    </g>
-
-    <!-- Legend -->
-    <g class="map-legend" font-family="var(--mono)" font-size="10" fill="var(--silver)">
-      <rect x="20" y="340" width="180" height="50" rx="6" fill="var(--glass-bg)" stroke="var(--glass-border)" />
-      <circle cx="35" cy="352" r="4" fill="var(--neon-cyan)" />
-      <text x="45" y="356">Active Projects</text>
-      <circle cx="35" cy="370" r="4" fill="var(--neon-purple)" />
-      <text x="45" y="374">Completed Projects</text>
-      <text x="30" y="344" font-weight="600" fill="var(--white)">Legend</text>
-    </g>
-
-    <!-- Stats -->
-    <g class="map-stats" font-family="var(--mono)" text-anchor="end" fill="var(--white)">
-      <text x="780" y="350" font-size="24" font-weight="800" fill="var(--neon-cyan)">4</text>
-      <text x="780" y="370" font-size="10" fill="var(--silver)">Cities</text>
-      <text x="780" y="388" font-size="10" fill="var(--silver)">2</text>
-      <text x="760" y="388" font-size="10" fill="var(--silver)">Countries</text>
-    </g>
-  </svg>
-</div>
-
-<style>
-.world-map-wrap{width:100%;max-width:900px;margin:0 auto;position:relative}
-.world-map{width:100%;height:auto;display:block;border-radius:12px;overflow:visible}
-.map-pins .map-pin{cursor:pointer;transition:transform .3s var(--ease)}
-.map-pins .map-pin:hover{transform:scale(1.2);z-index:10}
-.map-pins 
-.map-pins .map-pin:hover .pin-label{opacity:1;transform:translateY(0)}
-.map-pins .map-pin:hover [data-tooltip]::after{opacity:1;visibility:visible}
-.pin-pulse{opacity:.3}
-
-.pin-ring{transition:r .3s var(--ease),stroke-width .3s var(--ease)}
-.map-pin:hover .pin-ring{r:14;stroke-width:3}
-.pin-core{transition:r .3s var(--ease)}
-.map-pin:hover .pin-core{r:7}
-.pin-label{font-family:var(--mono);font-size:9;font-weight:600;fill:var(--white);opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s;pointer-events:none}
-.map-reach{opacity:.6}
-.map-pin:hover + .map-reach, .map-reach:hover{opacity:1}
-[data-tooltip]{position:relative}
-[data-tooltip]::after{content:attr(data-tooltip);position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:8px;padding:10px 12px;font-family:var(--mono);font-size:10;line-height:1.5;color:var(--silver);white-space:pre;min-width:180px;max-width:220px;backdrop-filter:var(--glass-blur);box-shadow:0 12px 32px rgba(0,0,0,.4);z-index:20;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;pointer-events:none}
-[data-tooltip]::before{content:"";position:absolute;bottom:124%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--glass-border);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:19}
-.map-pin:hover [data-tooltip]::after,
-.map-pin:hover [data-tooltip]::before{opacity:1;visibility:visible}
-@media(max-width:600px){
-  .world-map{height:300px}
-  [data-tooltip]::after{font-size:9;min-width:160px;max-width:200px;padding:8px 10px}
-}
-</style>
 <section class="sec">
     <div class="container">
       <div class="sec-head" style="text-align:center">
@@ -341,14 +204,7 @@
         </div>
       </div>
 
-      <div class="map-wrap" style="margin-top:48px">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122063.88910773914!2d31.00073585!3d-17.8251661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194cfda673c87367%3A0xa427c2d9feb9d04e!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2sza!4v1724000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Noel Digital Agency Location - Harare, Zimbabwe"></iframe>
-        <div class="map-overlay"></div>
-        <div class="map-badge">
-          <div class="map-badge-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="map-badge-text"><strong>Harare, Zimbabwe</strong><span>Serving clients globally</span></div>
-        </div>
-      </div>
+      
     </div>
   </section>
 
@@ -466,7 +322,7 @@
 var btt=document.getElementById('btt');
     if(btt){window.addEventListener('scroll',function(){btt.classList.toggle('show',window.scrollY>400)});btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
     var tt=document.getElementById('themeToggle');
-    if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark'})}
+    if(tt){var st=localStorage.getItem('theme');if(st==='light'){document.body.classList.add('light');tt.querySelector('.theme-label').textContent='Dark'}tt.addEventListener('click',function(){document.body.classList.toggle('light');var il=document.body.classList.contains('light');tt.querySelector('.theme-label').textContent=il?'Dark':'Light';localStorage.setItem('theme',il?'light':'dark')})}
   </script>
 
 <!-- Command Palette - include at end of <body> on all pages -->
