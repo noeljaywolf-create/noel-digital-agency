@@ -442,7 +442,8 @@ var btt=document.getElementById('btt');
 })();
 </script>
   
-    // Portfolio filter
+    <script>
+// Portfolio filter
     function filterProjects(cat) {
       document.querySelectorAll('.pf-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.filter === cat); });
       document.querySelectorAll('.port-card').forEach(function(card){
@@ -453,7 +454,8 @@ var btt=document.getElementById('btt');
         }
       });
     }
-
+
+</script>
 <script>
     (function(){
       var el=document.getElementById("copyright-year");
