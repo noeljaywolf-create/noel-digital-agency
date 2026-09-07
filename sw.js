@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = 'noel-digital-v2';
+﻿const CACHE_NAME = 'noel-digital-v3';
 const ASSETS = [
   './',
   './index.html',
@@ -10,7 +10,7 @@ const ASSETS = [
   './roi-calculator.html',
   './404.html',
   './blog.html',
-  './styles.css?v=10',
+  './styles.css?v=11',
   './manifest.json',
   './favicon.ico',
   './feed.xml',

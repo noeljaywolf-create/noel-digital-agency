@@ -1,4 +1,4 @@
-﻿?<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -22,69 +22,24 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
 
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Noel Digital Agency","url":"https://noeljaywolf-create.github.io/noel-digital-agency/","logo":"https://noeljaywolf-create.github.io/noel-digital-agency/loggo.png","description":"Professional web development, app creation, UI/UX design, digital marketing, and professional writing services.","founder":{"@type":"Person","name":"Noel Chakwenya","jobTitle":"Digital Solutions Specialist","nationality":{"@type":"Country","name":"Zimbabwe"}},"address":{"@type":"PostalAddress","addressCountry":"ZW"},"contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"chakwenyanoel0@gmail.com","telephone":"+263-77-127-3169"},"sameAs":["https://www.linkedin.com/in/noel-chakwenya","https://github.com/noeljaywolf-create"],"areaServed":{"@type":"Country","name":"Zimbabwe"},"serviceType":["Web Development","App Development","UI/UX Design","Digital Marketing","Professional Writing"]}
-  
-    // Enhanced Quote Builder
-    var svcNames = {web:'Web Development',app:'App Development',design:'UI/UX Design',marketing:'Digital Marketing',writing:'Professional Writing'};
-    var svcTimelines = {web:[1,2],app:[2,4],design:[1,3],marketing:[1,2],writing:[1,1]};
-    function updateQuote() {
-      var items = document.getElementById('quoteBriefItems');
-      var timeEl = document.getElementById('quoteTimeEst');
-      if (!items || !timeEl) return;
-      var tags = [];
-      var maxWeeks = 1;
-      document.querySelectorAll('.price-slider').forEach(function(s) {
-        var val = parseInt(s.value);
-        if (val > 0) {
-          tags.push('<span class="quote-brief-tag">' + svcNames[s.dataset.service] + ' (' + val + (val === 1 ? ' page' : ' pages') + ')</span>');
-          if (svcTimelines[s.dataset.service][1] > maxWeeks) maxWeeks = svcTimelines[s.dataset.service][1];
-        }
-      });
-      items.innerHTML = tags.length ? tags.join('') : '<span class="quote-brief-tag">No services selected</span>';
-      timeEl.textContent = maxWeeks <= 1 ? '1 week' : maxWeeks <= 2 ? '1-2 weeks' : maxWeeks <= 3 ? '2-3 weeks' : maxWeeks <= 4 ? '3-4 weeks' : '4-6 weeks';
-    }
-
-    // PDF Download
-    function downloadPDF() {
-      var total = document.querySelector('.price-total').textContent;
-      var items = [];
-      document.querySelectorAll('.price-slider').forEach(function(s) {
-        var val = parseInt(s.value);
-        if (val > 0) items.push(svcNames[s.dataset.service] + ': ' + formatCurrency(val * prices[s.dataset.service]));
-      });
-      var timeEst = document.getElementById('quoteTimeEst').textContent;
-      var lines = [
-        'NOEL DIGITAL agency - PROJECT QUOTE',
-        '====================================',
-        '',
-        'Date: ' + new Date().toLocaleDateString(),
-        '',
-        'PROJECT BREAKDOWN:',
-        '-------------------'
-      ];
-      items.forEach(function(item) { lines.push('  ' + item) });
-      lines.push('');
-      lines.push('ESTIMATED TOTAL: ' + total);
-      lines.push('ESTIMATED TIMELINE: ' + timeEst);
-      lines.push('');
-      lines.push('This is an estimate. Contact us for an exact quote.');
-      lines.push('Email: chakwenyanoel0@gmail.com');
-      lines.push('WhatsApp: +263771273169');
-      lines.push('Web: noeljaywolf-create.github.io/noel-digital-agency/');
-      var blob = new Blob([lines.join('\n')], {type:'text/plain'});
-      var a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'Noel-Digital-Agency-Quote.txt';
-      a.click();
-      URL.revokeObjectURL(a.href);
-    }
   </script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@700;800&display=swap">
   <style>
     .hero-inner{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 0}
   </style>
+  <link rel="canonical" href="https://noeljaywolf-create.github.io/noel-digital-agency/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://noeljaywolf-create.github.io/noel-digital-agency/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Noel Digital Agency","image":"https://noeljaywolf-create.github.io/noel-digital-agency/loggo.png","url":"https://noeljaywolf-create.github.io/noel-digital-agency/","telephone":"+263771273169","email":"chakwenyanoel0@gmail.com","address":{"@type":"PostalAddress","addressCountry":"ZW","addressLocality":"Harare"},"geo":{"@type":"GeoCoordinates","latitude":-17.8252,"longitude":31.0335},"areaServed":{"@type":"Country","name":"Zimbabwe"},"priceRange":"$$","sameAs":["https://www.linkedin.com/in/noel-chakwenya","https://github.com/noeljaywolf-create"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Noel Digital Agency","url":"https://noeljaywolf-create.github.io/noel-digital-agency/"}
+  </script>
 </head>
 <body>
 
