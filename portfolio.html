@@ -22,11 +22,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="loggo.png" as="image">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@700;800&display=swap">
   <style>
     .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;position:relative;z-index:1}
-    .port-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;transition:border-color .4s,box-shadow .4s;text-decoration:none;position:relative;backdrop-filter:blur(20px)}
+    .port-card{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:20px;overflow:hidden;transition:border-color .4s,box-shadow .4s;text-decoration:none;position:relative;}
     .port-card:hover{box-shadow:0 24px 48px rgba(0,0,0,.35),0 0 20px rgba(0,212,255,.08);border-color:rgba(0,212,255,.2)}
     .port-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:2;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple))}
     .port-card:hover::before{transform:scaleX(1)}
